@@ -1,0 +1,3457 @@
+@charset "UTF-8";
+.hero {
+  overflow: hidden;
+}
+
+.hero__title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.hero__title img {
+  width: 200px;
+}
+
+.header-swiper .swiper {
+  overflow: visible !important;
+}
+
+.header-swiper .swiper-slide {
+  height: 500px;
+  overflow: hidden;
+}
+
+@media (min-width: 960px) {
+  .header-swiper .swiper-slide {
+    height: 700px;
+  }
+}
+
+.header-swiper .swiper-slide > img {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.header-swiper .swiper-slide-active .slide-img,
+.header-swiper .swiper-slide-duplicate-active .slide-img,
+.header-swiper .swiper-slide-prev .slide-img {
+  -webkit-animation: zoom-in 7s linear 0s 1 normal both;
+          animation: zoom-in 7s linear 0s 1 normal both;
+}
+
+@-webkit-keyframes zoom-in {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+
+@keyframes zoom-in {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+
+.gallery-swiper .swiper {
+  overflow: visible !important;
+}
+
+.gallery-swiper .swiper-slide {
+  overflow: hidden;
+  height: 220px;
+}
+
+@media (min-width: 480px) {
+  .gallery-swiper .swiper-slide {
+    height: 230px;
+  }
+}
+
+@media (min-width: 600px) {
+  .gallery-swiper .swiper-slide {
+    height: 250px;
+  }
+}
+
+@media (min-width: 960px) {
+  .gallery-swiper .swiper-slide {
+    height: 280px;
+  }
+}
+
+.gallery-swiper .swiper-slide > img {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#container {
+  position: relative;
+  z-index: 10;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.header {
+  background-color: #3c2f2a;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mobile-menu {
+  position: fixed;
+  right: 0;
+  top: 60px;
+  width: 300px;
+}
+
+.mobile-menu__logo-image {
+  margin-left: 30px;
+}
+
+.mobile-menu__btn {
+  background-color: transparent;
+  border: none;
+  outline: none !important;
+  cursor: pointer;
+  margin-right: 15px;
+}
+
+.mobile-menu__btn > span {
+  background-color: white;
+  width: 35px;
+  height: 2px;
+  display: block;
+  margin-bottom: 9px;
+  -webkit-transition: -webkit-transform 0.7s;
+  transition: -webkit-transform 0.7s;
+  transition: transform 0.7s;
+  transition: transform 0.7s, -webkit-transform 0.7s;
+}
+
+.mobile-menu__btn > span:last-child {
+  margin-bottom: 0;
+}
+
+.mobile-menu__cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+  cursor: pointer;
+  z-index: 300;
+}
+
+.mobile-menu__main {
+  padding: 0;
+  -webkit-perspective: 2000px;
+          perspective: 2000px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.mobile-menu__item {
+  list-style: none;
+  display: block;
+  -webkit-transform: translate3d(0, 0, -1000px);
+          transform: translate3d(0, 0, -1000px);
+  padding: 0 40px;
+  -webkit-transition: opacity 0.2s, -webkit-transform 0.3s;
+  transition: opacity 0.2s, -webkit-transform 0.3s;
+  transition: transform 0.3s, opacity 0.2s;
+  transition: transform 0.3s, opacity 0.2s, -webkit-transform 0.3s;
+  opacity: 0;
+}
+
+.mobile-menu__link {
+  display: block;
+  margin-top: 30px;
+  color: #3c2f2a;
+  text-decoration: none;
+}
+
+.menu-open #container {
+  -webkit-transform: translate(-300px, 60px);
+          transform: translate(-300px, 60px);
+  -webkit-box-shadow: 0 8px 40px -10px rgba(0, 0, 0, 0.8);
+          box-shadow: 0 8px 40px -10px rgba(0, 0, 0, 0.8);
+}
+
+.menu-open .mobile-menu__cover {
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu-open .mobile-menu__item {
+  -webkit-transform: none;
+          transform: none;
+  opacity: 1;
+}
+
+.menu-open .mobile-menu__item:nth-child(1) {
+  -webkit-transition-delay: 0.07s;
+          transition-delay: 0.07s;
+}
+
+.menu-open .mobile-menu__item:nth-child(2) {
+  -webkit-transition-delay: 0.14s;
+          transition-delay: 0.14s;
+}
+
+.menu-open .mobile-menu__item:nth-child(3) {
+  -webkit-transition-delay: 0.21s;
+          transition-delay: 0.21s;
+}
+
+.menu-open .mobile-menu__item:nth-child(4) {
+  -webkit-transition-delay: 0.28s;
+          transition-delay: 0.28s;
+}
+
+.menu-open .mobile-menu__item:nth-child(5) {
+  -webkit-transition-delay: 0.35s;
+          transition-delay: 0.35s;
+}
+
+.menu-open .mobile-menu__btn > span {
+  background-color: white;
+}
+
+.menu-open .mobile-menu__btn > span:nth-child(1) {
+  -webkit-transition-delay: 0.07s;
+          transition-delay: 0.07s;
+  -webkit-transform: translateY(11px) rotate(135deg);
+          transform: translateY(11px) rotate(135deg);
+}
+
+.menu-open .mobile-menu__btn > span:nth-child(2) {
+  -webkit-transform: translateX(-18px) scale(0);
+          transform: translateX(-18px) scale(0);
+}
+
+.menu-open .mobile-menu__btn > span:nth-child(3) {
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+  -webkit-transform: translateY(-11px) rotate(-135deg);
+          transform: translateY(-11px) rotate(-135deg);
+}
+
+.mobile-menu__main-title {
+  font-weight: 600;
+  font-size: 25px;
+}
+
+.mobile-menu__sub-title {
+  display: block;
+  font-size: 14px;
+  color: #535353;
+}
+
+.menu__img {
+  position: relative;
+  opacity: 0;
+}
+
+.menu__img .img {
+  position: relative;
+  z-index: 2;
+}
+
+.menu__img.inview {
+  opacity: 1;
+  -webkit-animation-name: kf-img-fade;
+          animation-name: kf-img-fade;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.menu__img.inview::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-color: #3c2f2a;
+  -webkit-animation-name: kf-img-shadow;
+          animation-name: kf-img-shadow;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.menu__img.inview.inview:hover::before {
+  content: '';
+  -webkit-transition: translate 1s;
+  transition: translate 1s;
+  -webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+}
+
+@-webkit-keyframes kf-img-fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes kf-img-fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes kf-img-shadow {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(15px, 15px);
+            transform: translate(15px, 15px);
+    -webkit-box-shadow: 0 0 8px #424242;
+            box-shadow: 0 0 8px #424242;
+  }
+}
+
+@keyframes kf-img-shadow {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(15px, 15px);
+            transform: translate(15px, 15px);
+    -webkit-box-shadow: 0 0 8px #424242;
+            box-shadow: 0 0 8px #424242;
+  }
+}
+
+.about__img {
+  position: relative;
+  opacity: 0;
+}
+
+.about__img img {
+  position: relative;
+  z-index: 2;
+}
+
+.about__img.inview {
+  opacity: 1;
+  -webkit-animation-name: kf-img-left;
+          animation-name: kf-img-left;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.about__img.inview::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-color: #3c2f2a;
+  -webkit-animation-name: kf-shadow-rotate;
+          animation-name: kf-shadow-rotate;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes kf-img-left {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-30px);
+            transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@keyframes kf-img-left {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-30px);
+            transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@-webkit-keyframes kf-shadow-rotate {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: rotate(4deg);
+            transform: rotate(4deg);
+    -webkit-box-shadow: 0 0 8px #424242;
+            box-shadow: 0 0 8px #424242;
+  }
+}
+
+@keyframes kf-shadow-rotate {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: rotate(4deg);
+            transform: rotate(4deg);
+    -webkit-box-shadow: 0 0 8px #424242;
+            box-shadow: 0 0 8px #424242;
+  }
+}
+
+.strength__img {
+  position: relative;
+  opacity: 0;
+}
+
+.strength__img img {
+  position: relative;
+  z-index: 2;
+}
+
+.strength__img.inview {
+  opacity: 1;
+  -webkit-animation-name: kf-img-right;
+          animation-name: kf-img-right;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.strength__img.inview::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-color: #3c2f2a;
+  -webkit-animation-name: kf-shadow-rotate;
+          animation-name: kf-shadow-rotate;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes kf-img-right {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(30px);
+            transform: translateX(30px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@keyframes kf-img-right {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(30px);
+            transform: translateX(30px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+.about .main-title,
+.about .sub-title,
+.strength .main-title,
+.strength .sub-title,
+.menu .main-title,
+.menu .sub-title,
+.gallery .main-title,
+.gallery .sub-title,
+.information .main-title,
+.information .sub-title,
+.access .main-title,
+.access .sub-title {
+  opacity: 0;
+}
+
+.about .main-title.inview,
+.about .sub-title.inview,
+.strength .main-title.inview,
+.strength .sub-title.inview,
+.menu .main-title.inview,
+.menu .sub-title.inview,
+.gallery .main-title.inview,
+.gallery .sub-title.inview,
+.information .main-title.inview,
+.information .sub-title.inview,
+.access .main-title.inview,
+.access .sub-title.inview {
+  z-index: 10;
+  opacity: 1;
+}
+
+.about .main-title.inview .char,
+.about .sub-title.inview .char,
+.strength .main-title.inview .char,
+.strength .sub-title.inview .char,
+.menu .main-title.inview .char,
+.menu .sub-title.inview .char,
+.gallery .main-title.inview .char,
+.gallery .sub-title.inview .char,
+.information .main-title.inview .char,
+.information .sub-title.inview .char,
+.access .main-title.inview .char,
+.access .sub-title.inview .char {
+  display: inline-block;
+  -webkit-animation-name: kf-animate-chars;
+          animation-name: kf-animate-chars;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.about .main-title.inview .char:nth-child(1),
+.about .sub-title.inview .char:nth-child(1),
+.strength .main-title.inview .char:nth-child(1),
+.strength .sub-title.inview .char:nth-child(1),
+.menu .main-title.inview .char:nth-child(1),
+.menu .sub-title.inview .char:nth-child(1),
+.gallery .main-title.inview .char:nth-child(1),
+.gallery .sub-title.inview .char:nth-child(1),
+.information .main-title.inview .char:nth-child(1),
+.information .sub-title.inview .char:nth-child(1),
+.access .main-title.inview .char:nth-child(1),
+.access .sub-title.inview .char:nth-child(1) {
+  -webkit-animation-delay: 0.04s;
+          animation-delay: 0.04s;
+}
+
+.about .main-title.inview .char:nth-child(2),
+.about .sub-title.inview .char:nth-child(2),
+.strength .main-title.inview .char:nth-child(2),
+.strength .sub-title.inview .char:nth-child(2),
+.menu .main-title.inview .char:nth-child(2),
+.menu .sub-title.inview .char:nth-child(2),
+.gallery .main-title.inview .char:nth-child(2),
+.gallery .sub-title.inview .char:nth-child(2),
+.information .main-title.inview .char:nth-child(2),
+.information .sub-title.inview .char:nth-child(2),
+.access .main-title.inview .char:nth-child(2),
+.access .sub-title.inview .char:nth-child(2) {
+  -webkit-animation-delay: 0.08s;
+          animation-delay: 0.08s;
+}
+
+.about .main-title.inview .char:nth-child(3),
+.about .sub-title.inview .char:nth-child(3),
+.strength .main-title.inview .char:nth-child(3),
+.strength .sub-title.inview .char:nth-child(3),
+.menu .main-title.inview .char:nth-child(3),
+.menu .sub-title.inview .char:nth-child(3),
+.gallery .main-title.inview .char:nth-child(3),
+.gallery .sub-title.inview .char:nth-child(3),
+.information .main-title.inview .char:nth-child(3),
+.information .sub-title.inview .char:nth-child(3),
+.access .main-title.inview .char:nth-child(3),
+.access .sub-title.inview .char:nth-child(3) {
+  -webkit-animation-delay: 0.12s;
+          animation-delay: 0.12s;
+}
+
+.about .main-title.inview .char:nth-child(4),
+.about .sub-title.inview .char:nth-child(4),
+.strength .main-title.inview .char:nth-child(4),
+.strength .sub-title.inview .char:nth-child(4),
+.menu .main-title.inview .char:nth-child(4),
+.menu .sub-title.inview .char:nth-child(4),
+.gallery .main-title.inview .char:nth-child(4),
+.gallery .sub-title.inview .char:nth-child(4),
+.information .main-title.inview .char:nth-child(4),
+.information .sub-title.inview .char:nth-child(4),
+.access .main-title.inview .char:nth-child(4),
+.access .sub-title.inview .char:nth-child(4) {
+  -webkit-animation-delay: 0.16s;
+          animation-delay: 0.16s;
+}
+
+.about .main-title.inview .char:nth-child(5),
+.about .sub-title.inview .char:nth-child(5),
+.strength .main-title.inview .char:nth-child(5),
+.strength .sub-title.inview .char:nth-child(5),
+.menu .main-title.inview .char:nth-child(5),
+.menu .sub-title.inview .char:nth-child(5),
+.gallery .main-title.inview .char:nth-child(5),
+.gallery .sub-title.inview .char:nth-child(5),
+.information .main-title.inview .char:nth-child(5),
+.information .sub-title.inview .char:nth-child(5),
+.access .main-title.inview .char:nth-child(5),
+.access .sub-title.inview .char:nth-child(5) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.about .main-title.inview .char:nth-child(6),
+.about .sub-title.inview .char:nth-child(6),
+.strength .main-title.inview .char:nth-child(6),
+.strength .sub-title.inview .char:nth-child(6),
+.menu .main-title.inview .char:nth-child(6),
+.menu .sub-title.inview .char:nth-child(6),
+.gallery .main-title.inview .char:nth-child(6),
+.gallery .sub-title.inview .char:nth-child(6),
+.information .main-title.inview .char:nth-child(6),
+.information .sub-title.inview .char:nth-child(6),
+.access .main-title.inview .char:nth-child(6),
+.access .sub-title.inview .char:nth-child(6) {
+  -webkit-animation-delay: 0.24s;
+          animation-delay: 0.24s;
+}
+
+.about .main-title.inview .char:nth-child(7),
+.about .sub-title.inview .char:nth-child(7),
+.strength .main-title.inview .char:nth-child(7),
+.strength .sub-title.inview .char:nth-child(7),
+.menu .main-title.inview .char:nth-child(7),
+.menu .sub-title.inview .char:nth-child(7),
+.gallery .main-title.inview .char:nth-child(7),
+.gallery .sub-title.inview .char:nth-child(7),
+.information .main-title.inview .char:nth-child(7),
+.information .sub-title.inview .char:nth-child(7),
+.access .main-title.inview .char:nth-child(7),
+.access .sub-title.inview .char:nth-child(7) {
+  -webkit-animation-delay: 0.28s;
+          animation-delay: 0.28s;
+}
+
+.about .main-title.inview .char:nth-child(8),
+.about .sub-title.inview .char:nth-child(8),
+.strength .main-title.inview .char:nth-child(8),
+.strength .sub-title.inview .char:nth-child(8),
+.menu .main-title.inview .char:nth-child(8),
+.menu .sub-title.inview .char:nth-child(8),
+.gallery .main-title.inview .char:nth-child(8),
+.gallery .sub-title.inview .char:nth-child(8),
+.information .main-title.inview .char:nth-child(8),
+.information .sub-title.inview .char:nth-child(8),
+.access .main-title.inview .char:nth-child(8),
+.access .sub-title.inview .char:nth-child(8) {
+  -webkit-animation-delay: 0.32s;
+          animation-delay: 0.32s;
+}
+
+.about .main-title.inview .char:nth-child(9),
+.about .sub-title.inview .char:nth-child(9),
+.strength .main-title.inview .char:nth-child(9),
+.strength .sub-title.inview .char:nth-child(9),
+.menu .main-title.inview .char:nth-child(9),
+.menu .sub-title.inview .char:nth-child(9),
+.gallery .main-title.inview .char:nth-child(9),
+.gallery .sub-title.inview .char:nth-child(9),
+.information .main-title.inview .char:nth-child(9),
+.information .sub-title.inview .char:nth-child(9),
+.access .main-title.inview .char:nth-child(9),
+.access .sub-title.inview .char:nth-child(9) {
+  -webkit-animation-delay: 0.36s;
+          animation-delay: 0.36s;
+}
+
+.about .main-title.inview .char:nth-child(10),
+.about .sub-title.inview .char:nth-child(10),
+.strength .main-title.inview .char:nth-child(10),
+.strength .sub-title.inview .char:nth-child(10),
+.menu .main-title.inview .char:nth-child(10),
+.menu .sub-title.inview .char:nth-child(10),
+.gallery .main-title.inview .char:nth-child(10),
+.gallery .sub-title.inview .char:nth-child(10),
+.information .main-title.inview .char:nth-child(10),
+.information .sub-title.inview .char:nth-child(10),
+.access .main-title.inview .char:nth-child(10),
+.access .sub-title.inview .char:nth-child(10) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.about .main-title.inview .char:nth-child(11),
+.about .sub-title.inview .char:nth-child(11),
+.strength .main-title.inview .char:nth-child(11),
+.strength .sub-title.inview .char:nth-child(11),
+.menu .main-title.inview .char:nth-child(11),
+.menu .sub-title.inview .char:nth-child(11),
+.gallery .main-title.inview .char:nth-child(11),
+.gallery .sub-title.inview .char:nth-child(11),
+.information .main-title.inview .char:nth-child(11),
+.information .sub-title.inview .char:nth-child(11),
+.access .main-title.inview .char:nth-child(11),
+.access .sub-title.inview .char:nth-child(11) {
+  -webkit-animation-delay: 0.44s;
+          animation-delay: 0.44s;
+}
+
+.about .main-title.inview .char:nth-child(12),
+.about .sub-title.inview .char:nth-child(12),
+.strength .main-title.inview .char:nth-child(12),
+.strength .sub-title.inview .char:nth-child(12),
+.menu .main-title.inview .char:nth-child(12),
+.menu .sub-title.inview .char:nth-child(12),
+.gallery .main-title.inview .char:nth-child(12),
+.gallery .sub-title.inview .char:nth-child(12),
+.information .main-title.inview .char:nth-child(12),
+.information .sub-title.inview .char:nth-child(12),
+.access .main-title.inview .char:nth-child(12),
+.access .sub-title.inview .char:nth-child(12) {
+  -webkit-animation-delay: 0.48s;
+          animation-delay: 0.48s;
+}
+
+.about .main-title.inview .char:nth-child(13),
+.about .sub-title.inview .char:nth-child(13),
+.strength .main-title.inview .char:nth-child(13),
+.strength .sub-title.inview .char:nth-child(13),
+.menu .main-title.inview .char:nth-child(13),
+.menu .sub-title.inview .char:nth-child(13),
+.gallery .main-title.inview .char:nth-child(13),
+.gallery .sub-title.inview .char:nth-child(13),
+.information .main-title.inview .char:nth-child(13),
+.information .sub-title.inview .char:nth-child(13),
+.access .main-title.inview .char:nth-child(13),
+.access .sub-title.inview .char:nth-child(13) {
+  -webkit-animation-delay: 0.52s;
+          animation-delay: 0.52s;
+}
+
+.about .main-title.inview .char:nth-child(14),
+.about .sub-title.inview .char:nth-child(14),
+.strength .main-title.inview .char:nth-child(14),
+.strength .sub-title.inview .char:nth-child(14),
+.menu .main-title.inview .char:nth-child(14),
+.menu .sub-title.inview .char:nth-child(14),
+.gallery .main-title.inview .char:nth-child(14),
+.gallery .sub-title.inview .char:nth-child(14),
+.information .main-title.inview .char:nth-child(14),
+.information .sub-title.inview .char:nth-child(14),
+.access .main-title.inview .char:nth-child(14),
+.access .sub-title.inview .char:nth-child(14) {
+  -webkit-animation-delay: 0.56s;
+          animation-delay: 0.56s;
+}
+
+.about .main-title.inview .char:nth-child(15),
+.about .sub-title.inview .char:nth-child(15),
+.strength .main-title.inview .char:nth-child(15),
+.strength .sub-title.inview .char:nth-child(15),
+.menu .main-title.inview .char:nth-child(15),
+.menu .sub-title.inview .char:nth-child(15),
+.gallery .main-title.inview .char:nth-child(15),
+.gallery .sub-title.inview .char:nth-child(15),
+.information .main-title.inview .char:nth-child(15),
+.information .sub-title.inview .char:nth-child(15),
+.access .main-title.inview .char:nth-child(15),
+.access .sub-title.inview .char:nth-child(15) {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+.about .main-title.inview .char:nth-child(16),
+.about .sub-title.inview .char:nth-child(16),
+.strength .main-title.inview .char:nth-child(16),
+.strength .sub-title.inview .char:nth-child(16),
+.menu .main-title.inview .char:nth-child(16),
+.menu .sub-title.inview .char:nth-child(16),
+.gallery .main-title.inview .char:nth-child(16),
+.gallery .sub-title.inview .char:nth-child(16),
+.information .main-title.inview .char:nth-child(16),
+.information .sub-title.inview .char:nth-child(16),
+.access .main-title.inview .char:nth-child(16),
+.access .sub-title.inview .char:nth-child(16) {
+  -webkit-animation-delay: 0.64s;
+          animation-delay: 0.64s;
+}
+
+.about .main-title.inview .char:nth-child(17),
+.about .sub-title.inview .char:nth-child(17),
+.strength .main-title.inview .char:nth-child(17),
+.strength .sub-title.inview .char:nth-child(17),
+.menu .main-title.inview .char:nth-child(17),
+.menu .sub-title.inview .char:nth-child(17),
+.gallery .main-title.inview .char:nth-child(17),
+.gallery .sub-title.inview .char:nth-child(17),
+.information .main-title.inview .char:nth-child(17),
+.information .sub-title.inview .char:nth-child(17),
+.access .main-title.inview .char:nth-child(17),
+.access .sub-title.inview .char:nth-child(17) {
+  -webkit-animation-delay: 0.68s;
+          animation-delay: 0.68s;
+}
+
+.about .main-title.inview .char:nth-child(18),
+.about .sub-title.inview .char:nth-child(18),
+.strength .main-title.inview .char:nth-child(18),
+.strength .sub-title.inview .char:nth-child(18),
+.menu .main-title.inview .char:nth-child(18),
+.menu .sub-title.inview .char:nth-child(18),
+.gallery .main-title.inview .char:nth-child(18),
+.gallery .sub-title.inview .char:nth-child(18),
+.information .main-title.inview .char:nth-child(18),
+.information .sub-title.inview .char:nth-child(18),
+.access .main-title.inview .char:nth-child(18),
+.access .sub-title.inview .char:nth-child(18) {
+  -webkit-animation-delay: 0.72s;
+          animation-delay: 0.72s;
+}
+
+.about .main-title.inview .char:nth-child(19),
+.about .sub-title.inview .char:nth-child(19),
+.strength .main-title.inview .char:nth-child(19),
+.strength .sub-title.inview .char:nth-child(19),
+.menu .main-title.inview .char:nth-child(19),
+.menu .sub-title.inview .char:nth-child(19),
+.gallery .main-title.inview .char:nth-child(19),
+.gallery .sub-title.inview .char:nth-child(19),
+.information .main-title.inview .char:nth-child(19),
+.information .sub-title.inview .char:nth-child(19),
+.access .main-title.inview .char:nth-child(19),
+.access .sub-title.inview .char:nth-child(19) {
+  -webkit-animation-delay: 0.76s;
+          animation-delay: 0.76s;
+}
+
+.about .main-title.inview .char:nth-child(20),
+.about .sub-title.inview .char:nth-child(20),
+.strength .main-title.inview .char:nth-child(20),
+.strength .sub-title.inview .char:nth-child(20),
+.menu .main-title.inview .char:nth-child(20),
+.menu .sub-title.inview .char:nth-child(20),
+.gallery .main-title.inview .char:nth-child(20),
+.gallery .sub-title.inview .char:nth-child(20),
+.information .main-title.inview .char:nth-child(20),
+.information .sub-title.inview .char:nth-child(20),
+.access .main-title.inview .char:nth-child(20),
+.access .sub-title.inview .char:nth-child(20) {
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+.about .main-title.inview .char:nth-child(21),
+.about .sub-title.inview .char:nth-child(21),
+.strength .main-title.inview .char:nth-child(21),
+.strength .sub-title.inview .char:nth-child(21),
+.menu .main-title.inview .char:nth-child(21),
+.menu .sub-title.inview .char:nth-child(21),
+.gallery .main-title.inview .char:nth-child(21),
+.gallery .sub-title.inview .char:nth-child(21),
+.information .main-title.inview .char:nth-child(21),
+.information .sub-title.inview .char:nth-child(21),
+.access .main-title.inview .char:nth-child(21),
+.access .sub-title.inview .char:nth-child(21) {
+  -webkit-animation-delay: 0.84s;
+          animation-delay: 0.84s;
+}
+
+.about .main-title.inview .char:nth-child(22),
+.about .sub-title.inview .char:nth-child(22),
+.strength .main-title.inview .char:nth-child(22),
+.strength .sub-title.inview .char:nth-child(22),
+.menu .main-title.inview .char:nth-child(22),
+.menu .sub-title.inview .char:nth-child(22),
+.gallery .main-title.inview .char:nth-child(22),
+.gallery .sub-title.inview .char:nth-child(22),
+.information .main-title.inview .char:nth-child(22),
+.information .sub-title.inview .char:nth-child(22),
+.access .main-title.inview .char:nth-child(22),
+.access .sub-title.inview .char:nth-child(22) {
+  -webkit-animation-delay: 0.88s;
+          animation-delay: 0.88s;
+}
+
+.about .main-title.inview .char:nth-child(23),
+.about .sub-title.inview .char:nth-child(23),
+.strength .main-title.inview .char:nth-child(23),
+.strength .sub-title.inview .char:nth-child(23),
+.menu .main-title.inview .char:nth-child(23),
+.menu .sub-title.inview .char:nth-child(23),
+.gallery .main-title.inview .char:nth-child(23),
+.gallery .sub-title.inview .char:nth-child(23),
+.information .main-title.inview .char:nth-child(23),
+.information .sub-title.inview .char:nth-child(23),
+.access .main-title.inview .char:nth-child(23),
+.access .sub-title.inview .char:nth-child(23) {
+  -webkit-animation-delay: 0.92s;
+          animation-delay: 0.92s;
+}
+
+.about .main-title.inview .char:nth-child(24),
+.about .sub-title.inview .char:nth-child(24),
+.strength .main-title.inview .char:nth-child(24),
+.strength .sub-title.inview .char:nth-child(24),
+.menu .main-title.inview .char:nth-child(24),
+.menu .sub-title.inview .char:nth-child(24),
+.gallery .main-title.inview .char:nth-child(24),
+.gallery .sub-title.inview .char:nth-child(24),
+.information .main-title.inview .char:nth-child(24),
+.information .sub-title.inview .char:nth-child(24),
+.access .main-title.inview .char:nth-child(24),
+.access .sub-title.inview .char:nth-child(24) {
+  -webkit-animation-delay: 0.96s;
+          animation-delay: 0.96s;
+}
+
+.about .main-title.inview .char:nth-child(25),
+.about .sub-title.inview .char:nth-child(25),
+.strength .main-title.inview .char:nth-child(25),
+.strength .sub-title.inview .char:nth-child(25),
+.menu .main-title.inview .char:nth-child(25),
+.menu .sub-title.inview .char:nth-child(25),
+.gallery .main-title.inview .char:nth-child(25),
+.gallery .sub-title.inview .char:nth-child(25),
+.information .main-title.inview .char:nth-child(25),
+.information .sub-title.inview .char:nth-child(25),
+.access .main-title.inview .char:nth-child(25),
+.access .sub-title.inview .char:nth-child(25) {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.about .main-title.inview .char:nth-child(26),
+.about .sub-title.inview .char:nth-child(26),
+.strength .main-title.inview .char:nth-child(26),
+.strength .sub-title.inview .char:nth-child(26),
+.menu .main-title.inview .char:nth-child(26),
+.menu .sub-title.inview .char:nth-child(26),
+.gallery .main-title.inview .char:nth-child(26),
+.gallery .sub-title.inview .char:nth-child(26),
+.information .main-title.inview .char:nth-child(26),
+.information .sub-title.inview .char:nth-child(26),
+.access .main-title.inview .char:nth-child(26),
+.access .sub-title.inview .char:nth-child(26) {
+  -webkit-animation-delay: 1.04s;
+          animation-delay: 1.04s;
+}
+
+.about .main-title.inview .char:nth-child(27),
+.about .sub-title.inview .char:nth-child(27),
+.strength .main-title.inview .char:nth-child(27),
+.strength .sub-title.inview .char:nth-child(27),
+.menu .main-title.inview .char:nth-child(27),
+.menu .sub-title.inview .char:nth-child(27),
+.gallery .main-title.inview .char:nth-child(27),
+.gallery .sub-title.inview .char:nth-child(27),
+.information .main-title.inview .char:nth-child(27),
+.information .sub-title.inview .char:nth-child(27),
+.access .main-title.inview .char:nth-child(27),
+.access .sub-title.inview .char:nth-child(27) {
+  -webkit-animation-delay: 1.08s;
+          animation-delay: 1.08s;
+}
+
+.about .main-title.inview .char:nth-child(28),
+.about .sub-title.inview .char:nth-child(28),
+.strength .main-title.inview .char:nth-child(28),
+.strength .sub-title.inview .char:nth-child(28),
+.menu .main-title.inview .char:nth-child(28),
+.menu .sub-title.inview .char:nth-child(28),
+.gallery .main-title.inview .char:nth-child(28),
+.gallery .sub-title.inview .char:nth-child(28),
+.information .main-title.inview .char:nth-child(28),
+.information .sub-title.inview .char:nth-child(28),
+.access .main-title.inview .char:nth-child(28),
+.access .sub-title.inview .char:nth-child(28) {
+  -webkit-animation-delay: 1.12s;
+          animation-delay: 1.12s;
+}
+
+.about .main-title.inview .char:nth-child(29),
+.about .sub-title.inview .char:nth-child(29),
+.strength .main-title.inview .char:nth-child(29),
+.strength .sub-title.inview .char:nth-child(29),
+.menu .main-title.inview .char:nth-child(29),
+.menu .sub-title.inview .char:nth-child(29),
+.gallery .main-title.inview .char:nth-child(29),
+.gallery .sub-title.inview .char:nth-child(29),
+.information .main-title.inview .char:nth-child(29),
+.information .sub-title.inview .char:nth-child(29),
+.access .main-title.inview .char:nth-child(29),
+.access .sub-title.inview .char:nth-child(29) {
+  -webkit-animation-delay: 1.16s;
+          animation-delay: 1.16s;
+}
+
+.about .main-title.inview .char:nth-child(30),
+.about .sub-title.inview .char:nth-child(30),
+.strength .main-title.inview .char:nth-child(30),
+.strength .sub-title.inview .char:nth-child(30),
+.menu .main-title.inview .char:nth-child(30),
+.menu .sub-title.inview .char:nth-child(30),
+.gallery .main-title.inview .char:nth-child(30),
+.gallery .sub-title.inview .char:nth-child(30),
+.information .main-title.inview .char:nth-child(30),
+.information .sub-title.inview .char:nth-child(30),
+.access .main-title.inview .char:nth-child(30),
+.access .sub-title.inview .char:nth-child(30) {
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+}
+
+.about .main-title.inview .char:nth-child(31),
+.about .sub-title.inview .char:nth-child(31),
+.strength .main-title.inview .char:nth-child(31),
+.strength .sub-title.inview .char:nth-child(31),
+.menu .main-title.inview .char:nth-child(31),
+.menu .sub-title.inview .char:nth-child(31),
+.gallery .main-title.inview .char:nth-child(31),
+.gallery .sub-title.inview .char:nth-child(31),
+.information .main-title.inview .char:nth-child(31),
+.information .sub-title.inview .char:nth-child(31),
+.access .main-title.inview .char:nth-child(31),
+.access .sub-title.inview .char:nth-child(31) {
+  -webkit-animation-delay: 1.24s;
+          animation-delay: 1.24s;
+}
+
+.about .main-title.inview .char:nth-child(32),
+.about .sub-title.inview .char:nth-child(32),
+.strength .main-title.inview .char:nth-child(32),
+.strength .sub-title.inview .char:nth-child(32),
+.menu .main-title.inview .char:nth-child(32),
+.menu .sub-title.inview .char:nth-child(32),
+.gallery .main-title.inview .char:nth-child(32),
+.gallery .sub-title.inview .char:nth-child(32),
+.information .main-title.inview .char:nth-child(32),
+.information .sub-title.inview .char:nth-child(32),
+.access .main-title.inview .char:nth-child(32),
+.access .sub-title.inview .char:nth-child(32) {
+  -webkit-animation-delay: 1.28s;
+          animation-delay: 1.28s;
+}
+
+.about .main-title.inview .char:nth-child(33),
+.about .sub-title.inview .char:nth-child(33),
+.strength .main-title.inview .char:nth-child(33),
+.strength .sub-title.inview .char:nth-child(33),
+.menu .main-title.inview .char:nth-child(33),
+.menu .sub-title.inview .char:nth-child(33),
+.gallery .main-title.inview .char:nth-child(33),
+.gallery .sub-title.inview .char:nth-child(33),
+.information .main-title.inview .char:nth-child(33),
+.information .sub-title.inview .char:nth-child(33),
+.access .main-title.inview .char:nth-child(33),
+.access .sub-title.inview .char:nth-child(33) {
+  -webkit-animation-delay: 1.32s;
+          animation-delay: 1.32s;
+}
+
+.about .main-title.inview .char:nth-child(34),
+.about .sub-title.inview .char:nth-child(34),
+.strength .main-title.inview .char:nth-child(34),
+.strength .sub-title.inview .char:nth-child(34),
+.menu .main-title.inview .char:nth-child(34),
+.menu .sub-title.inview .char:nth-child(34),
+.gallery .main-title.inview .char:nth-child(34),
+.gallery .sub-title.inview .char:nth-child(34),
+.information .main-title.inview .char:nth-child(34),
+.information .sub-title.inview .char:nth-child(34),
+.access .main-title.inview .char:nth-child(34),
+.access .sub-title.inview .char:nth-child(34) {
+  -webkit-animation-delay: 1.36s;
+          animation-delay: 1.36s;
+}
+
+.about .main-title.inview .char:nth-child(35),
+.about .sub-title.inview .char:nth-child(35),
+.strength .main-title.inview .char:nth-child(35),
+.strength .sub-title.inview .char:nth-child(35),
+.menu .main-title.inview .char:nth-child(35),
+.menu .sub-title.inview .char:nth-child(35),
+.gallery .main-title.inview .char:nth-child(35),
+.gallery .sub-title.inview .char:nth-child(35),
+.information .main-title.inview .char:nth-child(35),
+.information .sub-title.inview .char:nth-child(35),
+.access .main-title.inview .char:nth-child(35),
+.access .sub-title.inview .char:nth-child(35) {
+  -webkit-animation-delay: 1.4s;
+          animation-delay: 1.4s;
+}
+
+.about .main-title.inview .char:nth-child(36),
+.about .sub-title.inview .char:nth-child(36),
+.strength .main-title.inview .char:nth-child(36),
+.strength .sub-title.inview .char:nth-child(36),
+.menu .main-title.inview .char:nth-child(36),
+.menu .sub-title.inview .char:nth-child(36),
+.gallery .main-title.inview .char:nth-child(36),
+.gallery .sub-title.inview .char:nth-child(36),
+.information .main-title.inview .char:nth-child(36),
+.information .sub-title.inview .char:nth-child(36),
+.access .main-title.inview .char:nth-child(36),
+.access .sub-title.inview .char:nth-child(36) {
+  -webkit-animation-delay: 1.44s;
+          animation-delay: 1.44s;
+}
+
+.about .main-title.inview .char:nth-child(37),
+.about .sub-title.inview .char:nth-child(37),
+.strength .main-title.inview .char:nth-child(37),
+.strength .sub-title.inview .char:nth-child(37),
+.menu .main-title.inview .char:nth-child(37),
+.menu .sub-title.inview .char:nth-child(37),
+.gallery .main-title.inview .char:nth-child(37),
+.gallery .sub-title.inview .char:nth-child(37),
+.information .main-title.inview .char:nth-child(37),
+.information .sub-title.inview .char:nth-child(37),
+.access .main-title.inview .char:nth-child(37),
+.access .sub-title.inview .char:nth-child(37) {
+  -webkit-animation-delay: 1.48s;
+          animation-delay: 1.48s;
+}
+
+.about .main-title.inview .char:nth-child(38),
+.about .sub-title.inview .char:nth-child(38),
+.strength .main-title.inview .char:nth-child(38),
+.strength .sub-title.inview .char:nth-child(38),
+.menu .main-title.inview .char:nth-child(38),
+.menu .sub-title.inview .char:nth-child(38),
+.gallery .main-title.inview .char:nth-child(38),
+.gallery .sub-title.inview .char:nth-child(38),
+.information .main-title.inview .char:nth-child(38),
+.information .sub-title.inview .char:nth-child(38),
+.access .main-title.inview .char:nth-child(38),
+.access .sub-title.inview .char:nth-child(38) {
+  -webkit-animation-delay: 1.52s;
+          animation-delay: 1.52s;
+}
+
+.about .main-title.inview .char:nth-child(39),
+.about .sub-title.inview .char:nth-child(39),
+.strength .main-title.inview .char:nth-child(39),
+.strength .sub-title.inview .char:nth-child(39),
+.menu .main-title.inview .char:nth-child(39),
+.menu .sub-title.inview .char:nth-child(39),
+.gallery .main-title.inview .char:nth-child(39),
+.gallery .sub-title.inview .char:nth-child(39),
+.information .main-title.inview .char:nth-child(39),
+.information .sub-title.inview .char:nth-child(39),
+.access .main-title.inview .char:nth-child(39),
+.access .sub-title.inview .char:nth-child(39) {
+  -webkit-animation-delay: 1.56s;
+          animation-delay: 1.56s;
+}
+
+.about .main-title.inview .char:nth-child(40),
+.about .sub-title.inview .char:nth-child(40),
+.strength .main-title.inview .char:nth-child(40),
+.strength .sub-title.inview .char:nth-child(40),
+.menu .main-title.inview .char:nth-child(40),
+.menu .sub-title.inview .char:nth-child(40),
+.gallery .main-title.inview .char:nth-child(40),
+.gallery .sub-title.inview .char:nth-child(40),
+.information .main-title.inview .char:nth-child(40),
+.information .sub-title.inview .char:nth-child(40),
+.access .main-title.inview .char:nth-child(40),
+.access .sub-title.inview .char:nth-child(40) {
+  -webkit-animation-delay: 1.6s;
+          animation-delay: 1.6s;
+}
+
+.about .main-title.inview .char:nth-child(41),
+.about .sub-title.inview .char:nth-child(41),
+.strength .main-title.inview .char:nth-child(41),
+.strength .sub-title.inview .char:nth-child(41),
+.menu .main-title.inview .char:nth-child(41),
+.menu .sub-title.inview .char:nth-child(41),
+.gallery .main-title.inview .char:nth-child(41),
+.gallery .sub-title.inview .char:nth-child(41),
+.information .main-title.inview .char:nth-child(41),
+.information .sub-title.inview .char:nth-child(41),
+.access .main-title.inview .char:nth-child(41),
+.access .sub-title.inview .char:nth-child(41) {
+  -webkit-animation-delay: 1.64s;
+          animation-delay: 1.64s;
+}
+
+.about .main-title.inview .char:nth-child(42),
+.about .sub-title.inview .char:nth-child(42),
+.strength .main-title.inview .char:nth-child(42),
+.strength .sub-title.inview .char:nth-child(42),
+.menu .main-title.inview .char:nth-child(42),
+.menu .sub-title.inview .char:nth-child(42),
+.gallery .main-title.inview .char:nth-child(42),
+.gallery .sub-title.inview .char:nth-child(42),
+.information .main-title.inview .char:nth-child(42),
+.information .sub-title.inview .char:nth-child(42),
+.access .main-title.inview .char:nth-child(42),
+.access .sub-title.inview .char:nth-child(42) {
+  -webkit-animation-delay: 1.68s;
+          animation-delay: 1.68s;
+}
+
+.about .main-title.inview .char:nth-child(43),
+.about .sub-title.inview .char:nth-child(43),
+.strength .main-title.inview .char:nth-child(43),
+.strength .sub-title.inview .char:nth-child(43),
+.menu .main-title.inview .char:nth-child(43),
+.menu .sub-title.inview .char:nth-child(43),
+.gallery .main-title.inview .char:nth-child(43),
+.gallery .sub-title.inview .char:nth-child(43),
+.information .main-title.inview .char:nth-child(43),
+.information .sub-title.inview .char:nth-child(43),
+.access .main-title.inview .char:nth-child(43),
+.access .sub-title.inview .char:nth-child(43) {
+  -webkit-animation-delay: 1.72s;
+          animation-delay: 1.72s;
+}
+
+.about .main-title.inview .char:nth-child(44),
+.about .sub-title.inview .char:nth-child(44),
+.strength .main-title.inview .char:nth-child(44),
+.strength .sub-title.inview .char:nth-child(44),
+.menu .main-title.inview .char:nth-child(44),
+.menu .sub-title.inview .char:nth-child(44),
+.gallery .main-title.inview .char:nth-child(44),
+.gallery .sub-title.inview .char:nth-child(44),
+.information .main-title.inview .char:nth-child(44),
+.information .sub-title.inview .char:nth-child(44),
+.access .main-title.inview .char:nth-child(44),
+.access .sub-title.inview .char:nth-child(44) {
+  -webkit-animation-delay: 1.76s;
+          animation-delay: 1.76s;
+}
+
+.about .main-title.inview .char:nth-child(45),
+.about .sub-title.inview .char:nth-child(45),
+.strength .main-title.inview .char:nth-child(45),
+.strength .sub-title.inview .char:nth-child(45),
+.menu .main-title.inview .char:nth-child(45),
+.menu .sub-title.inview .char:nth-child(45),
+.gallery .main-title.inview .char:nth-child(45),
+.gallery .sub-title.inview .char:nth-child(45),
+.information .main-title.inview .char:nth-child(45),
+.information .sub-title.inview .char:nth-child(45),
+.access .main-title.inview .char:nth-child(45),
+.access .sub-title.inview .char:nth-child(45) {
+  -webkit-animation-delay: 1.8s;
+          animation-delay: 1.8s;
+}
+
+.about .main-title.inview .char:nth-child(46),
+.about .sub-title.inview .char:nth-child(46),
+.strength .main-title.inview .char:nth-child(46),
+.strength .sub-title.inview .char:nth-child(46),
+.menu .main-title.inview .char:nth-child(46),
+.menu .sub-title.inview .char:nth-child(46),
+.gallery .main-title.inview .char:nth-child(46),
+.gallery .sub-title.inview .char:nth-child(46),
+.information .main-title.inview .char:nth-child(46),
+.information .sub-title.inview .char:nth-child(46),
+.access .main-title.inview .char:nth-child(46),
+.access .sub-title.inview .char:nth-child(46) {
+  -webkit-animation-delay: 1.84s;
+          animation-delay: 1.84s;
+}
+
+.about .main-title.inview .char:nth-child(47),
+.about .sub-title.inview .char:nth-child(47),
+.strength .main-title.inview .char:nth-child(47),
+.strength .sub-title.inview .char:nth-child(47),
+.menu .main-title.inview .char:nth-child(47),
+.menu .sub-title.inview .char:nth-child(47),
+.gallery .main-title.inview .char:nth-child(47),
+.gallery .sub-title.inview .char:nth-child(47),
+.information .main-title.inview .char:nth-child(47),
+.information .sub-title.inview .char:nth-child(47),
+.access .main-title.inview .char:nth-child(47),
+.access .sub-title.inview .char:nth-child(47) {
+  -webkit-animation-delay: 1.88s;
+          animation-delay: 1.88s;
+}
+
+.about .main-title.inview .char:nth-child(48),
+.about .sub-title.inview .char:nth-child(48),
+.strength .main-title.inview .char:nth-child(48),
+.strength .sub-title.inview .char:nth-child(48),
+.menu .main-title.inview .char:nth-child(48),
+.menu .sub-title.inview .char:nth-child(48),
+.gallery .main-title.inview .char:nth-child(48),
+.gallery .sub-title.inview .char:nth-child(48),
+.information .main-title.inview .char:nth-child(48),
+.information .sub-title.inview .char:nth-child(48),
+.access .main-title.inview .char:nth-child(48),
+.access .sub-title.inview .char:nth-child(48) {
+  -webkit-animation-delay: 1.92s;
+          animation-delay: 1.92s;
+}
+
+.about .main-title.inview .char:nth-child(49),
+.about .sub-title.inview .char:nth-child(49),
+.strength .main-title.inview .char:nth-child(49),
+.strength .sub-title.inview .char:nth-child(49),
+.menu .main-title.inview .char:nth-child(49),
+.menu .sub-title.inview .char:nth-child(49),
+.gallery .main-title.inview .char:nth-child(49),
+.gallery .sub-title.inview .char:nth-child(49),
+.information .main-title.inview .char:nth-child(49),
+.information .sub-title.inview .char:nth-child(49),
+.access .main-title.inview .char:nth-child(49),
+.access .sub-title.inview .char:nth-child(49) {
+  -webkit-animation-delay: 1.96s;
+          animation-delay: 1.96s;
+}
+
+.about .main-title.inview .char:nth-child(50),
+.about .sub-title.inview .char:nth-child(50),
+.strength .main-title.inview .char:nth-child(50),
+.strength .sub-title.inview .char:nth-child(50),
+.menu .main-title.inview .char:nth-child(50),
+.menu .sub-title.inview .char:nth-child(50),
+.gallery .main-title.inview .char:nth-child(50),
+.gallery .sub-title.inview .char:nth-child(50),
+.information .main-title.inview .char:nth-child(50),
+.information .sub-title.inview .char:nth-child(50),
+.access .main-title.inview .char:nth-child(50),
+.access .sub-title.inview .char:nth-child(50) {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.about .main-title.inview .char:nth-child(51),
+.about .sub-title.inview .char:nth-child(51),
+.strength .main-title.inview .char:nth-child(51),
+.strength .sub-title.inview .char:nth-child(51),
+.menu .main-title.inview .char:nth-child(51),
+.menu .sub-title.inview .char:nth-child(51),
+.gallery .main-title.inview .char:nth-child(51),
+.gallery .sub-title.inview .char:nth-child(51),
+.information .main-title.inview .char:nth-child(51),
+.information .sub-title.inview .char:nth-child(51),
+.access .main-title.inview .char:nth-child(51),
+.access .sub-title.inview .char:nth-child(51) {
+  -webkit-animation-delay: 2.04s;
+          animation-delay: 2.04s;
+}
+
+.about .main-title.inview .char:nth-child(52),
+.about .sub-title.inview .char:nth-child(52),
+.strength .main-title.inview .char:nth-child(52),
+.strength .sub-title.inview .char:nth-child(52),
+.menu .main-title.inview .char:nth-child(52),
+.menu .sub-title.inview .char:nth-child(52),
+.gallery .main-title.inview .char:nth-child(52),
+.gallery .sub-title.inview .char:nth-child(52),
+.information .main-title.inview .char:nth-child(52),
+.information .sub-title.inview .char:nth-child(52),
+.access .main-title.inview .char:nth-child(52),
+.access .sub-title.inview .char:nth-child(52) {
+  -webkit-animation-delay: 2.08s;
+          animation-delay: 2.08s;
+}
+
+.about .main-title.inview .char:nth-child(53),
+.about .sub-title.inview .char:nth-child(53),
+.strength .main-title.inview .char:nth-child(53),
+.strength .sub-title.inview .char:nth-child(53),
+.menu .main-title.inview .char:nth-child(53),
+.menu .sub-title.inview .char:nth-child(53),
+.gallery .main-title.inview .char:nth-child(53),
+.gallery .sub-title.inview .char:nth-child(53),
+.information .main-title.inview .char:nth-child(53),
+.information .sub-title.inview .char:nth-child(53),
+.access .main-title.inview .char:nth-child(53),
+.access .sub-title.inview .char:nth-child(53) {
+  -webkit-animation-delay: 2.12s;
+          animation-delay: 2.12s;
+}
+
+.about .main-title.inview .char:nth-child(54),
+.about .sub-title.inview .char:nth-child(54),
+.strength .main-title.inview .char:nth-child(54),
+.strength .sub-title.inview .char:nth-child(54),
+.menu .main-title.inview .char:nth-child(54),
+.menu .sub-title.inview .char:nth-child(54),
+.gallery .main-title.inview .char:nth-child(54),
+.gallery .sub-title.inview .char:nth-child(54),
+.information .main-title.inview .char:nth-child(54),
+.information .sub-title.inview .char:nth-child(54),
+.access .main-title.inview .char:nth-child(54),
+.access .sub-title.inview .char:nth-child(54) {
+  -webkit-animation-delay: 2.16s;
+          animation-delay: 2.16s;
+}
+
+.about .main-title.inview .char:nth-child(55),
+.about .sub-title.inview .char:nth-child(55),
+.strength .main-title.inview .char:nth-child(55),
+.strength .sub-title.inview .char:nth-child(55),
+.menu .main-title.inview .char:nth-child(55),
+.menu .sub-title.inview .char:nth-child(55),
+.gallery .main-title.inview .char:nth-child(55),
+.gallery .sub-title.inview .char:nth-child(55),
+.information .main-title.inview .char:nth-child(55),
+.information .sub-title.inview .char:nth-child(55),
+.access .main-title.inview .char:nth-child(55),
+.access .sub-title.inview .char:nth-child(55) {
+  -webkit-animation-delay: 2.2s;
+          animation-delay: 2.2s;
+}
+
+.about .main-title.inview .char:nth-child(56),
+.about .sub-title.inview .char:nth-child(56),
+.strength .main-title.inview .char:nth-child(56),
+.strength .sub-title.inview .char:nth-child(56),
+.menu .main-title.inview .char:nth-child(56),
+.menu .sub-title.inview .char:nth-child(56),
+.gallery .main-title.inview .char:nth-child(56),
+.gallery .sub-title.inview .char:nth-child(56),
+.information .main-title.inview .char:nth-child(56),
+.information .sub-title.inview .char:nth-child(56),
+.access .main-title.inview .char:nth-child(56),
+.access .sub-title.inview .char:nth-child(56) {
+  -webkit-animation-delay: 2.24s;
+          animation-delay: 2.24s;
+}
+
+.about .main-title.inview .char:nth-child(57),
+.about .sub-title.inview .char:nth-child(57),
+.strength .main-title.inview .char:nth-child(57),
+.strength .sub-title.inview .char:nth-child(57),
+.menu .main-title.inview .char:nth-child(57),
+.menu .sub-title.inview .char:nth-child(57),
+.gallery .main-title.inview .char:nth-child(57),
+.gallery .sub-title.inview .char:nth-child(57),
+.information .main-title.inview .char:nth-child(57),
+.information .sub-title.inview .char:nth-child(57),
+.access .main-title.inview .char:nth-child(57),
+.access .sub-title.inview .char:nth-child(57) {
+  -webkit-animation-delay: 2.28s;
+          animation-delay: 2.28s;
+}
+
+.about .main-title.inview .char:nth-child(58),
+.about .sub-title.inview .char:nth-child(58),
+.strength .main-title.inview .char:nth-child(58),
+.strength .sub-title.inview .char:nth-child(58),
+.menu .main-title.inview .char:nth-child(58),
+.menu .sub-title.inview .char:nth-child(58),
+.gallery .main-title.inview .char:nth-child(58),
+.gallery .sub-title.inview .char:nth-child(58),
+.information .main-title.inview .char:nth-child(58),
+.information .sub-title.inview .char:nth-child(58),
+.access .main-title.inview .char:nth-child(58),
+.access .sub-title.inview .char:nth-child(58) {
+  -webkit-animation-delay: 2.32s;
+          animation-delay: 2.32s;
+}
+
+.about .main-title.inview .char:nth-child(59),
+.about .sub-title.inview .char:nth-child(59),
+.strength .main-title.inview .char:nth-child(59),
+.strength .sub-title.inview .char:nth-child(59),
+.menu .main-title.inview .char:nth-child(59),
+.menu .sub-title.inview .char:nth-child(59),
+.gallery .main-title.inview .char:nth-child(59),
+.gallery .sub-title.inview .char:nth-child(59),
+.information .main-title.inview .char:nth-child(59),
+.information .sub-title.inview .char:nth-child(59),
+.access .main-title.inview .char:nth-child(59),
+.access .sub-title.inview .char:nth-child(59) {
+  -webkit-animation-delay: 2.36s;
+          animation-delay: 2.36s;
+}
+
+.about .main-title.inview .char:nth-child(60),
+.about .sub-title.inview .char:nth-child(60),
+.strength .main-title.inview .char:nth-child(60),
+.strength .sub-title.inview .char:nth-child(60),
+.menu .main-title.inview .char:nth-child(60),
+.menu .sub-title.inview .char:nth-child(60),
+.gallery .main-title.inview .char:nth-child(60),
+.gallery .sub-title.inview .char:nth-child(60),
+.information .main-title.inview .char:nth-child(60),
+.information .sub-title.inview .char:nth-child(60),
+.access .main-title.inview .char:nth-child(60),
+.access .sub-title.inview .char:nth-child(60) {
+  -webkit-animation-delay: 2.4s;
+          animation-delay: 2.4s;
+}
+
+.about .main-title.inview .char:nth-child(61),
+.about .sub-title.inview .char:nth-child(61),
+.strength .main-title.inview .char:nth-child(61),
+.strength .sub-title.inview .char:nth-child(61),
+.menu .main-title.inview .char:nth-child(61),
+.menu .sub-title.inview .char:nth-child(61),
+.gallery .main-title.inview .char:nth-child(61),
+.gallery .sub-title.inview .char:nth-child(61),
+.information .main-title.inview .char:nth-child(61),
+.information .sub-title.inview .char:nth-child(61),
+.access .main-title.inview .char:nth-child(61),
+.access .sub-title.inview .char:nth-child(61) {
+  -webkit-animation-delay: 2.44s;
+          animation-delay: 2.44s;
+}
+
+.about .main-title.inview .char:nth-child(62),
+.about .sub-title.inview .char:nth-child(62),
+.strength .main-title.inview .char:nth-child(62),
+.strength .sub-title.inview .char:nth-child(62),
+.menu .main-title.inview .char:nth-child(62),
+.menu .sub-title.inview .char:nth-child(62),
+.gallery .main-title.inview .char:nth-child(62),
+.gallery .sub-title.inview .char:nth-child(62),
+.information .main-title.inview .char:nth-child(62),
+.information .sub-title.inview .char:nth-child(62),
+.access .main-title.inview .char:nth-child(62),
+.access .sub-title.inview .char:nth-child(62) {
+  -webkit-animation-delay: 2.48s;
+          animation-delay: 2.48s;
+}
+
+.about .main-title.inview .char:nth-child(63),
+.about .sub-title.inview .char:nth-child(63),
+.strength .main-title.inview .char:nth-child(63),
+.strength .sub-title.inview .char:nth-child(63),
+.menu .main-title.inview .char:nth-child(63),
+.menu .sub-title.inview .char:nth-child(63),
+.gallery .main-title.inview .char:nth-child(63),
+.gallery .sub-title.inview .char:nth-child(63),
+.information .main-title.inview .char:nth-child(63),
+.information .sub-title.inview .char:nth-child(63),
+.access .main-title.inview .char:nth-child(63),
+.access .sub-title.inview .char:nth-child(63) {
+  -webkit-animation-delay: 2.52s;
+          animation-delay: 2.52s;
+}
+
+.about .main-title.inview .char:nth-child(64),
+.about .sub-title.inview .char:nth-child(64),
+.strength .main-title.inview .char:nth-child(64),
+.strength .sub-title.inview .char:nth-child(64),
+.menu .main-title.inview .char:nth-child(64),
+.menu .sub-title.inview .char:nth-child(64),
+.gallery .main-title.inview .char:nth-child(64),
+.gallery .sub-title.inview .char:nth-child(64),
+.information .main-title.inview .char:nth-child(64),
+.information .sub-title.inview .char:nth-child(64),
+.access .main-title.inview .char:nth-child(64),
+.access .sub-title.inview .char:nth-child(64) {
+  -webkit-animation-delay: 2.56s;
+          animation-delay: 2.56s;
+}
+
+.about .main-title.inview .char:nth-child(65),
+.about .sub-title.inview .char:nth-child(65),
+.strength .main-title.inview .char:nth-child(65),
+.strength .sub-title.inview .char:nth-child(65),
+.menu .main-title.inview .char:nth-child(65),
+.menu .sub-title.inview .char:nth-child(65),
+.gallery .main-title.inview .char:nth-child(65),
+.gallery .sub-title.inview .char:nth-child(65),
+.information .main-title.inview .char:nth-child(65),
+.information .sub-title.inview .char:nth-child(65),
+.access .main-title.inview .char:nth-child(65),
+.access .sub-title.inview .char:nth-child(65) {
+  -webkit-animation-delay: 2.6s;
+          animation-delay: 2.6s;
+}
+
+.about .main-title.inview .char:nth-child(66),
+.about .sub-title.inview .char:nth-child(66),
+.strength .main-title.inview .char:nth-child(66),
+.strength .sub-title.inview .char:nth-child(66),
+.menu .main-title.inview .char:nth-child(66),
+.menu .sub-title.inview .char:nth-child(66),
+.gallery .main-title.inview .char:nth-child(66),
+.gallery .sub-title.inview .char:nth-child(66),
+.information .main-title.inview .char:nth-child(66),
+.information .sub-title.inview .char:nth-child(66),
+.access .main-title.inview .char:nth-child(66),
+.access .sub-title.inview .char:nth-child(66) {
+  -webkit-animation-delay: 2.64s;
+          animation-delay: 2.64s;
+}
+
+.about .main-title.inview .char:nth-child(67),
+.about .sub-title.inview .char:nth-child(67),
+.strength .main-title.inview .char:nth-child(67),
+.strength .sub-title.inview .char:nth-child(67),
+.menu .main-title.inview .char:nth-child(67),
+.menu .sub-title.inview .char:nth-child(67),
+.gallery .main-title.inview .char:nth-child(67),
+.gallery .sub-title.inview .char:nth-child(67),
+.information .main-title.inview .char:nth-child(67),
+.information .sub-title.inview .char:nth-child(67),
+.access .main-title.inview .char:nth-child(67),
+.access .sub-title.inview .char:nth-child(67) {
+  -webkit-animation-delay: 2.68s;
+          animation-delay: 2.68s;
+}
+
+.about .main-title.inview .char:nth-child(68),
+.about .sub-title.inview .char:nth-child(68),
+.strength .main-title.inview .char:nth-child(68),
+.strength .sub-title.inview .char:nth-child(68),
+.menu .main-title.inview .char:nth-child(68),
+.menu .sub-title.inview .char:nth-child(68),
+.gallery .main-title.inview .char:nth-child(68),
+.gallery .sub-title.inview .char:nth-child(68),
+.information .main-title.inview .char:nth-child(68),
+.information .sub-title.inview .char:nth-child(68),
+.access .main-title.inview .char:nth-child(68),
+.access .sub-title.inview .char:nth-child(68) {
+  -webkit-animation-delay: 2.72s;
+          animation-delay: 2.72s;
+}
+
+.about .main-title.inview .char:nth-child(69),
+.about .sub-title.inview .char:nth-child(69),
+.strength .main-title.inview .char:nth-child(69),
+.strength .sub-title.inview .char:nth-child(69),
+.menu .main-title.inview .char:nth-child(69),
+.menu .sub-title.inview .char:nth-child(69),
+.gallery .main-title.inview .char:nth-child(69),
+.gallery .sub-title.inview .char:nth-child(69),
+.information .main-title.inview .char:nth-child(69),
+.information .sub-title.inview .char:nth-child(69),
+.access .main-title.inview .char:nth-child(69),
+.access .sub-title.inview .char:nth-child(69) {
+  -webkit-animation-delay: 2.76s;
+          animation-delay: 2.76s;
+}
+
+.about .main-title.inview .char:nth-child(70),
+.about .sub-title.inview .char:nth-child(70),
+.strength .main-title.inview .char:nth-child(70),
+.strength .sub-title.inview .char:nth-child(70),
+.menu .main-title.inview .char:nth-child(70),
+.menu .sub-title.inview .char:nth-child(70),
+.gallery .main-title.inview .char:nth-child(70),
+.gallery .sub-title.inview .char:nth-child(70),
+.information .main-title.inview .char:nth-child(70),
+.information .sub-title.inview .char:nth-child(70),
+.access .main-title.inview .char:nth-child(70),
+.access .sub-title.inview .char:nth-child(70) {
+  -webkit-animation-delay: 2.8s;
+          animation-delay: 2.8s;
+}
+
+.about .main-title.inview .char:nth-child(71),
+.about .sub-title.inview .char:nth-child(71),
+.strength .main-title.inview .char:nth-child(71),
+.strength .sub-title.inview .char:nth-child(71),
+.menu .main-title.inview .char:nth-child(71),
+.menu .sub-title.inview .char:nth-child(71),
+.gallery .main-title.inview .char:nth-child(71),
+.gallery .sub-title.inview .char:nth-child(71),
+.information .main-title.inview .char:nth-child(71),
+.information .sub-title.inview .char:nth-child(71),
+.access .main-title.inview .char:nth-child(71),
+.access .sub-title.inview .char:nth-child(71) {
+  -webkit-animation-delay: 2.84s;
+          animation-delay: 2.84s;
+}
+
+.about .main-title.inview .char:nth-child(72),
+.about .sub-title.inview .char:nth-child(72),
+.strength .main-title.inview .char:nth-child(72),
+.strength .sub-title.inview .char:nth-child(72),
+.menu .main-title.inview .char:nth-child(72),
+.menu .sub-title.inview .char:nth-child(72),
+.gallery .main-title.inview .char:nth-child(72),
+.gallery .sub-title.inview .char:nth-child(72),
+.information .main-title.inview .char:nth-child(72),
+.information .sub-title.inview .char:nth-child(72),
+.access .main-title.inview .char:nth-child(72),
+.access .sub-title.inview .char:nth-child(72) {
+  -webkit-animation-delay: 2.88s;
+          animation-delay: 2.88s;
+}
+
+.about .main-title.inview .char:nth-child(73),
+.about .sub-title.inview .char:nth-child(73),
+.strength .main-title.inview .char:nth-child(73),
+.strength .sub-title.inview .char:nth-child(73),
+.menu .main-title.inview .char:nth-child(73),
+.menu .sub-title.inview .char:nth-child(73),
+.gallery .main-title.inview .char:nth-child(73),
+.gallery .sub-title.inview .char:nth-child(73),
+.information .main-title.inview .char:nth-child(73),
+.information .sub-title.inview .char:nth-child(73),
+.access .main-title.inview .char:nth-child(73),
+.access .sub-title.inview .char:nth-child(73) {
+  -webkit-animation-delay: 2.92s;
+          animation-delay: 2.92s;
+}
+
+.about .main-title.inview .char:nth-child(74),
+.about .sub-title.inview .char:nth-child(74),
+.strength .main-title.inview .char:nth-child(74),
+.strength .sub-title.inview .char:nth-child(74),
+.menu .main-title.inview .char:nth-child(74),
+.menu .sub-title.inview .char:nth-child(74),
+.gallery .main-title.inview .char:nth-child(74),
+.gallery .sub-title.inview .char:nth-child(74),
+.information .main-title.inview .char:nth-child(74),
+.information .sub-title.inview .char:nth-child(74),
+.access .main-title.inview .char:nth-child(74),
+.access .sub-title.inview .char:nth-child(74) {
+  -webkit-animation-delay: 2.96s;
+          animation-delay: 2.96s;
+}
+
+.about .main-title.inview .char:nth-child(75),
+.about .sub-title.inview .char:nth-child(75),
+.strength .main-title.inview .char:nth-child(75),
+.strength .sub-title.inview .char:nth-child(75),
+.menu .main-title.inview .char:nth-child(75),
+.menu .sub-title.inview .char:nth-child(75),
+.gallery .main-title.inview .char:nth-child(75),
+.gallery .sub-title.inview .char:nth-child(75),
+.information .main-title.inview .char:nth-child(75),
+.information .sub-title.inview .char:nth-child(75),
+.access .main-title.inview .char:nth-child(75),
+.access .sub-title.inview .char:nth-child(75) {
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+.about .main-title.inview .char:nth-child(76),
+.about .sub-title.inview .char:nth-child(76),
+.strength .main-title.inview .char:nth-child(76),
+.strength .sub-title.inview .char:nth-child(76),
+.menu .main-title.inview .char:nth-child(76),
+.menu .sub-title.inview .char:nth-child(76),
+.gallery .main-title.inview .char:nth-child(76),
+.gallery .sub-title.inview .char:nth-child(76),
+.information .main-title.inview .char:nth-child(76),
+.information .sub-title.inview .char:nth-child(76),
+.access .main-title.inview .char:nth-child(76),
+.access .sub-title.inview .char:nth-child(76) {
+  -webkit-animation-delay: 3.04s;
+          animation-delay: 3.04s;
+}
+
+.about .main-title.inview .char:nth-child(77),
+.about .sub-title.inview .char:nth-child(77),
+.strength .main-title.inview .char:nth-child(77),
+.strength .sub-title.inview .char:nth-child(77),
+.menu .main-title.inview .char:nth-child(77),
+.menu .sub-title.inview .char:nth-child(77),
+.gallery .main-title.inview .char:nth-child(77),
+.gallery .sub-title.inview .char:nth-child(77),
+.information .main-title.inview .char:nth-child(77),
+.information .sub-title.inview .char:nth-child(77),
+.access .main-title.inview .char:nth-child(77),
+.access .sub-title.inview .char:nth-child(77) {
+  -webkit-animation-delay: 3.08s;
+          animation-delay: 3.08s;
+}
+
+.about .main-title.inview .char:nth-child(78),
+.about .sub-title.inview .char:nth-child(78),
+.strength .main-title.inview .char:nth-child(78),
+.strength .sub-title.inview .char:nth-child(78),
+.menu .main-title.inview .char:nth-child(78),
+.menu .sub-title.inview .char:nth-child(78),
+.gallery .main-title.inview .char:nth-child(78),
+.gallery .sub-title.inview .char:nth-child(78),
+.information .main-title.inview .char:nth-child(78),
+.information .sub-title.inview .char:nth-child(78),
+.access .main-title.inview .char:nth-child(78),
+.access .sub-title.inview .char:nth-child(78) {
+  -webkit-animation-delay: 3.12s;
+          animation-delay: 3.12s;
+}
+
+.about .main-title.inview .char:nth-child(79),
+.about .sub-title.inview .char:nth-child(79),
+.strength .main-title.inview .char:nth-child(79),
+.strength .sub-title.inview .char:nth-child(79),
+.menu .main-title.inview .char:nth-child(79),
+.menu .sub-title.inview .char:nth-child(79),
+.gallery .main-title.inview .char:nth-child(79),
+.gallery .sub-title.inview .char:nth-child(79),
+.information .main-title.inview .char:nth-child(79),
+.information .sub-title.inview .char:nth-child(79),
+.access .main-title.inview .char:nth-child(79),
+.access .sub-title.inview .char:nth-child(79) {
+  -webkit-animation-delay: 3.16s;
+          animation-delay: 3.16s;
+}
+
+.about .main-title.inview .char:nth-child(80),
+.about .sub-title.inview .char:nth-child(80),
+.strength .main-title.inview .char:nth-child(80),
+.strength .sub-title.inview .char:nth-child(80),
+.menu .main-title.inview .char:nth-child(80),
+.menu .sub-title.inview .char:nth-child(80),
+.gallery .main-title.inview .char:nth-child(80),
+.gallery .sub-title.inview .char:nth-child(80),
+.information .main-title.inview .char:nth-child(80),
+.information .sub-title.inview .char:nth-child(80),
+.access .main-title.inview .char:nth-child(80),
+.access .sub-title.inview .char:nth-child(80) {
+  -webkit-animation-delay: 3.2s;
+          animation-delay: 3.2s;
+}
+
+.about .main-title.inview .char:nth-child(81),
+.about .sub-title.inview .char:nth-child(81),
+.strength .main-title.inview .char:nth-child(81),
+.strength .sub-title.inview .char:nth-child(81),
+.menu .main-title.inview .char:nth-child(81),
+.menu .sub-title.inview .char:nth-child(81),
+.gallery .main-title.inview .char:nth-child(81),
+.gallery .sub-title.inview .char:nth-child(81),
+.information .main-title.inview .char:nth-child(81),
+.information .sub-title.inview .char:nth-child(81),
+.access .main-title.inview .char:nth-child(81),
+.access .sub-title.inview .char:nth-child(81) {
+  -webkit-animation-delay: 3.24s;
+          animation-delay: 3.24s;
+}
+
+.about .main-title.inview .char:nth-child(82),
+.about .sub-title.inview .char:nth-child(82),
+.strength .main-title.inview .char:nth-child(82),
+.strength .sub-title.inview .char:nth-child(82),
+.menu .main-title.inview .char:nth-child(82),
+.menu .sub-title.inview .char:nth-child(82),
+.gallery .main-title.inview .char:nth-child(82),
+.gallery .sub-title.inview .char:nth-child(82),
+.information .main-title.inview .char:nth-child(82),
+.information .sub-title.inview .char:nth-child(82),
+.access .main-title.inview .char:nth-child(82),
+.access .sub-title.inview .char:nth-child(82) {
+  -webkit-animation-delay: 3.28s;
+          animation-delay: 3.28s;
+}
+
+.about .main-title.inview .char:nth-child(83),
+.about .sub-title.inview .char:nth-child(83),
+.strength .main-title.inview .char:nth-child(83),
+.strength .sub-title.inview .char:nth-child(83),
+.menu .main-title.inview .char:nth-child(83),
+.menu .sub-title.inview .char:nth-child(83),
+.gallery .main-title.inview .char:nth-child(83),
+.gallery .sub-title.inview .char:nth-child(83),
+.information .main-title.inview .char:nth-child(83),
+.information .sub-title.inview .char:nth-child(83),
+.access .main-title.inview .char:nth-child(83),
+.access .sub-title.inview .char:nth-child(83) {
+  -webkit-animation-delay: 3.32s;
+          animation-delay: 3.32s;
+}
+
+.about .main-title.inview .char:nth-child(84),
+.about .sub-title.inview .char:nth-child(84),
+.strength .main-title.inview .char:nth-child(84),
+.strength .sub-title.inview .char:nth-child(84),
+.menu .main-title.inview .char:nth-child(84),
+.menu .sub-title.inview .char:nth-child(84),
+.gallery .main-title.inview .char:nth-child(84),
+.gallery .sub-title.inview .char:nth-child(84),
+.information .main-title.inview .char:nth-child(84),
+.information .sub-title.inview .char:nth-child(84),
+.access .main-title.inview .char:nth-child(84),
+.access .sub-title.inview .char:nth-child(84) {
+  -webkit-animation-delay: 3.36s;
+          animation-delay: 3.36s;
+}
+
+.about .main-title.inview .char:nth-child(85),
+.about .sub-title.inview .char:nth-child(85),
+.strength .main-title.inview .char:nth-child(85),
+.strength .sub-title.inview .char:nth-child(85),
+.menu .main-title.inview .char:nth-child(85),
+.menu .sub-title.inview .char:nth-child(85),
+.gallery .main-title.inview .char:nth-child(85),
+.gallery .sub-title.inview .char:nth-child(85),
+.information .main-title.inview .char:nth-child(85),
+.information .sub-title.inview .char:nth-child(85),
+.access .main-title.inview .char:nth-child(85),
+.access .sub-title.inview .char:nth-child(85) {
+  -webkit-animation-delay: 3.4s;
+          animation-delay: 3.4s;
+}
+
+.about .main-title.inview .char:nth-child(86),
+.about .sub-title.inview .char:nth-child(86),
+.strength .main-title.inview .char:nth-child(86),
+.strength .sub-title.inview .char:nth-child(86),
+.menu .main-title.inview .char:nth-child(86),
+.menu .sub-title.inview .char:nth-child(86),
+.gallery .main-title.inview .char:nth-child(86),
+.gallery .sub-title.inview .char:nth-child(86),
+.information .main-title.inview .char:nth-child(86),
+.information .sub-title.inview .char:nth-child(86),
+.access .main-title.inview .char:nth-child(86),
+.access .sub-title.inview .char:nth-child(86) {
+  -webkit-animation-delay: 3.44s;
+          animation-delay: 3.44s;
+}
+
+.about .main-title.inview .char:nth-child(87),
+.about .sub-title.inview .char:nth-child(87),
+.strength .main-title.inview .char:nth-child(87),
+.strength .sub-title.inview .char:nth-child(87),
+.menu .main-title.inview .char:nth-child(87),
+.menu .sub-title.inview .char:nth-child(87),
+.gallery .main-title.inview .char:nth-child(87),
+.gallery .sub-title.inview .char:nth-child(87),
+.information .main-title.inview .char:nth-child(87),
+.information .sub-title.inview .char:nth-child(87),
+.access .main-title.inview .char:nth-child(87),
+.access .sub-title.inview .char:nth-child(87) {
+  -webkit-animation-delay: 3.48s;
+          animation-delay: 3.48s;
+}
+
+.about .main-title.inview .char:nth-child(88),
+.about .sub-title.inview .char:nth-child(88),
+.strength .main-title.inview .char:nth-child(88),
+.strength .sub-title.inview .char:nth-child(88),
+.menu .main-title.inview .char:nth-child(88),
+.menu .sub-title.inview .char:nth-child(88),
+.gallery .main-title.inview .char:nth-child(88),
+.gallery .sub-title.inview .char:nth-child(88),
+.information .main-title.inview .char:nth-child(88),
+.information .sub-title.inview .char:nth-child(88),
+.access .main-title.inview .char:nth-child(88),
+.access .sub-title.inview .char:nth-child(88) {
+  -webkit-animation-delay: 3.52s;
+          animation-delay: 3.52s;
+}
+
+.about .main-title.inview .char:nth-child(89),
+.about .sub-title.inview .char:nth-child(89),
+.strength .main-title.inview .char:nth-child(89),
+.strength .sub-title.inview .char:nth-child(89),
+.menu .main-title.inview .char:nth-child(89),
+.menu .sub-title.inview .char:nth-child(89),
+.gallery .main-title.inview .char:nth-child(89),
+.gallery .sub-title.inview .char:nth-child(89),
+.information .main-title.inview .char:nth-child(89),
+.information .sub-title.inview .char:nth-child(89),
+.access .main-title.inview .char:nth-child(89),
+.access .sub-title.inview .char:nth-child(89) {
+  -webkit-animation-delay: 3.56s;
+          animation-delay: 3.56s;
+}
+
+.about .main-title.inview .char:nth-child(90),
+.about .sub-title.inview .char:nth-child(90),
+.strength .main-title.inview .char:nth-child(90),
+.strength .sub-title.inview .char:nth-child(90),
+.menu .main-title.inview .char:nth-child(90),
+.menu .sub-title.inview .char:nth-child(90),
+.gallery .main-title.inview .char:nth-child(90),
+.gallery .sub-title.inview .char:nth-child(90),
+.information .main-title.inview .char:nth-child(90),
+.information .sub-title.inview .char:nth-child(90),
+.access .main-title.inview .char:nth-child(90),
+.access .sub-title.inview .char:nth-child(90) {
+  -webkit-animation-delay: 3.6s;
+          animation-delay: 3.6s;
+}
+
+.about .main-title.inview .char:nth-child(91),
+.about .sub-title.inview .char:nth-child(91),
+.strength .main-title.inview .char:nth-child(91),
+.strength .sub-title.inview .char:nth-child(91),
+.menu .main-title.inview .char:nth-child(91),
+.menu .sub-title.inview .char:nth-child(91),
+.gallery .main-title.inview .char:nth-child(91),
+.gallery .sub-title.inview .char:nth-child(91),
+.information .main-title.inview .char:nth-child(91),
+.information .sub-title.inview .char:nth-child(91),
+.access .main-title.inview .char:nth-child(91),
+.access .sub-title.inview .char:nth-child(91) {
+  -webkit-animation-delay: 3.64s;
+          animation-delay: 3.64s;
+}
+
+.about .main-title.inview .char:nth-child(92),
+.about .sub-title.inview .char:nth-child(92),
+.strength .main-title.inview .char:nth-child(92),
+.strength .sub-title.inview .char:nth-child(92),
+.menu .main-title.inview .char:nth-child(92),
+.menu .sub-title.inview .char:nth-child(92),
+.gallery .main-title.inview .char:nth-child(92),
+.gallery .sub-title.inview .char:nth-child(92),
+.information .main-title.inview .char:nth-child(92),
+.information .sub-title.inview .char:nth-child(92),
+.access .main-title.inview .char:nth-child(92),
+.access .sub-title.inview .char:nth-child(92) {
+  -webkit-animation-delay: 3.68s;
+          animation-delay: 3.68s;
+}
+
+.about .main-title.inview .char:nth-child(93),
+.about .sub-title.inview .char:nth-child(93),
+.strength .main-title.inview .char:nth-child(93),
+.strength .sub-title.inview .char:nth-child(93),
+.menu .main-title.inview .char:nth-child(93),
+.menu .sub-title.inview .char:nth-child(93),
+.gallery .main-title.inview .char:nth-child(93),
+.gallery .sub-title.inview .char:nth-child(93),
+.information .main-title.inview .char:nth-child(93),
+.information .sub-title.inview .char:nth-child(93),
+.access .main-title.inview .char:nth-child(93),
+.access .sub-title.inview .char:nth-child(93) {
+  -webkit-animation-delay: 3.72s;
+          animation-delay: 3.72s;
+}
+
+.about .main-title.inview .char:nth-child(94),
+.about .sub-title.inview .char:nth-child(94),
+.strength .main-title.inview .char:nth-child(94),
+.strength .sub-title.inview .char:nth-child(94),
+.menu .main-title.inview .char:nth-child(94),
+.menu .sub-title.inview .char:nth-child(94),
+.gallery .main-title.inview .char:nth-child(94),
+.gallery .sub-title.inview .char:nth-child(94),
+.information .main-title.inview .char:nth-child(94),
+.information .sub-title.inview .char:nth-child(94),
+.access .main-title.inview .char:nth-child(94),
+.access .sub-title.inview .char:nth-child(94) {
+  -webkit-animation-delay: 3.76s;
+          animation-delay: 3.76s;
+}
+
+.about .main-title.inview .char:nth-child(95),
+.about .sub-title.inview .char:nth-child(95),
+.strength .main-title.inview .char:nth-child(95),
+.strength .sub-title.inview .char:nth-child(95),
+.menu .main-title.inview .char:nth-child(95),
+.menu .sub-title.inview .char:nth-child(95),
+.gallery .main-title.inview .char:nth-child(95),
+.gallery .sub-title.inview .char:nth-child(95),
+.information .main-title.inview .char:nth-child(95),
+.information .sub-title.inview .char:nth-child(95),
+.access .main-title.inview .char:nth-child(95),
+.access .sub-title.inview .char:nth-child(95) {
+  -webkit-animation-delay: 3.8s;
+          animation-delay: 3.8s;
+}
+
+.about .main-title.inview .char:nth-child(96),
+.about .sub-title.inview .char:nth-child(96),
+.strength .main-title.inview .char:nth-child(96),
+.strength .sub-title.inview .char:nth-child(96),
+.menu .main-title.inview .char:nth-child(96),
+.menu .sub-title.inview .char:nth-child(96),
+.gallery .main-title.inview .char:nth-child(96),
+.gallery .sub-title.inview .char:nth-child(96),
+.information .main-title.inview .char:nth-child(96),
+.information .sub-title.inview .char:nth-child(96),
+.access .main-title.inview .char:nth-child(96),
+.access .sub-title.inview .char:nth-child(96) {
+  -webkit-animation-delay: 3.84s;
+          animation-delay: 3.84s;
+}
+
+.about .main-title.inview .char:nth-child(97),
+.about .sub-title.inview .char:nth-child(97),
+.strength .main-title.inview .char:nth-child(97),
+.strength .sub-title.inview .char:nth-child(97),
+.menu .main-title.inview .char:nth-child(97),
+.menu .sub-title.inview .char:nth-child(97),
+.gallery .main-title.inview .char:nth-child(97),
+.gallery .sub-title.inview .char:nth-child(97),
+.information .main-title.inview .char:nth-child(97),
+.information .sub-title.inview .char:nth-child(97),
+.access .main-title.inview .char:nth-child(97),
+.access .sub-title.inview .char:nth-child(97) {
+  -webkit-animation-delay: 3.88s;
+          animation-delay: 3.88s;
+}
+
+.about .main-title.inview .char:nth-child(98),
+.about .sub-title.inview .char:nth-child(98),
+.strength .main-title.inview .char:nth-child(98),
+.strength .sub-title.inview .char:nth-child(98),
+.menu .main-title.inview .char:nth-child(98),
+.menu .sub-title.inview .char:nth-child(98),
+.gallery .main-title.inview .char:nth-child(98),
+.gallery .sub-title.inview .char:nth-child(98),
+.information .main-title.inview .char:nth-child(98),
+.information .sub-title.inview .char:nth-child(98),
+.access .main-title.inview .char:nth-child(98),
+.access .sub-title.inview .char:nth-child(98) {
+  -webkit-animation-delay: 3.92s;
+          animation-delay: 3.92s;
+}
+
+.about .main-title.inview .char:nth-child(99),
+.about .sub-title.inview .char:nth-child(99),
+.strength .main-title.inview .char:nth-child(99),
+.strength .sub-title.inview .char:nth-child(99),
+.menu .main-title.inview .char:nth-child(99),
+.menu .sub-title.inview .char:nth-child(99),
+.gallery .main-title.inview .char:nth-child(99),
+.gallery .sub-title.inview .char:nth-child(99),
+.information .main-title.inview .char:nth-child(99),
+.information .sub-title.inview .char:nth-child(99),
+.access .main-title.inview .char:nth-child(99),
+.access .sub-title.inview .char:nth-child(99) {
+  -webkit-animation-delay: 3.96s;
+          animation-delay: 3.96s;
+}
+
+.about .main-title.inview .char:nth-child(100),
+.about .sub-title.inview .char:nth-child(100),
+.strength .main-title.inview .char:nth-child(100),
+.strength .sub-title.inview .char:nth-child(100),
+.menu .main-title.inview .char:nth-child(100),
+.menu .sub-title.inview .char:nth-child(100),
+.gallery .main-title.inview .char:nth-child(100),
+.gallery .sub-title.inview .char:nth-child(100),
+.information .main-title.inview .char:nth-child(100),
+.information .sub-title.inview .char:nth-child(100),
+.access .main-title.inview .char:nth-child(100),
+.access .sub-title.inview .char:nth-child(100) {
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+}
+
+@-webkit-keyframes kf-animate-chars {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes kf-animate-chars {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+.btn {
+  position: relative;
+  width: 200px;
+  background-color: #eff0de;
+  color: #3c2f2a;
+  border: 1px solid #3c2f2a;
+  padding: 10px 30px;
+  margin: 30px auto 50px auto;
+  text-align: center;
+  font-weight: 600;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  z-index: 1;
+}
+
+.btn.slide-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn.slide-bg span {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background-color: #3c2f2a;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  z-index: -1;
+}
+
+.btn:hover {
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+}
+
+.btn:hover span {
+  -webkit-transform: none;
+          transform: none;
+}
+
+.btn:hover a {
+  color: #eff0de;
+}
+
+.line-btn button {
+  position: relative;
+}
+
+.line-btn button a {
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  color: #3c2f2a;
+  display: block;
+  padding: 10px 50px;
+  -webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
+}
+
+.line-btn button::before, .line-btn button::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  background: #3c2f2a;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.line-btn button::before {
+  right: 0;
+  top: 0;
+}
+
+.line-btn button::after {
+  left: 0;
+  bottom: 0;
+}
+
+.line-btn button span {
+  display: block;
+}
+
+.line-btn button span::before, .line-btn button span::after {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 0;
+  background: #3c2f2a;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.line-btn button span::before {
+  left: 0;
+  top: 0;
+}
+
+.line-btn button span::after {
+  right: 0;
+  bottom: 0;
+}
+
+.line-btn button:hover::before,
+.line-btn button:hover::after {
+  width: 100%;
+  /*横幅を100%に*/
+}
+
+.line-btn button:hover span::before,
+.line-btn button:hover span::after {
+  height: 100%;
+}
+
+.line-btn button:hover,
+.line-btn button a:hover {
+  color: #eff0de;
+  color: #eff0de;
+  background-color: #3c2f2a;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  -webkit-transition-delay: 0.35s;
+          transition-delay: 0.35s;
+}
+
+.shadow-btn {
+  display: block;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.shadow-btn a {
+  padding: 10px 50px;
+  background: #eff0de;
+  border: 1px solid #3c2f2a;
+  color: #3c2f2a;
+  font-weight: 600;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  position: relative;
+}
+
+.shadow-btn a::after {
+  content: '';
+  position: absolute;
+  right: -5px;
+  bottom: -5px;
+  width: 100%;
+  height: 100%;
+  border-right: 1px solid #3c2f2a;
+  border-bottom: 1px solid #3c2f2a;
+}
+
+.shadow-btn a:hover {
+  -webkit-box-shadow: 0 0 8px gray;
+          box-shadow: 0 0 8px gray;
+  background: #3c2f2a;
+  color: #eff0de;
+}
+
+.about .fade,
+.strength .fade,
+.menu .fade,
+.gallery .fade,
+.information .fade,
+.access .fade {
+  position: relative;
+  opacity: 0;
+}
+
+.about .fade.inview,
+.strength .fade.inview,
+.menu .fade.inview,
+.gallery .fade.inview,
+.information .fade.inview,
+.access .fade.inview {
+  opacity: 1;
+  -webkit-animation-name: kf-fade;
+          animation-name: kf-fade;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes kf-fade {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes kf-fade {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+.hero {
+  position: relative;
+}
+
+.scrolldown {
+  position: absolute;
+  z-index: 100;
+  left: 50%;
+  bottom: 10px;
+  height: 50px;
+  opacity: 0.8;
+}
+
+.scrolldown span {
+  position: absolute;
+  left: -20px;
+  top: -15px;
+  color: white;
+  font-size: 1em;
+  letter-spacing: 0.05em;
+}
+
+.scrolldown::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 1px;
+  height: 30px;
+  background: white;
+  -webkit-animation: linemove 2s ease-in-out infinite;
+          animation: linemove 2s ease-in-out infinite;
+  opacity: 0;
+}
+
+@-webkit-keyframes linemove {
+  0% {
+    height: 0;
+    top: 0;
+    opacity: 0;
+  }
+  30% {
+    height: 30px;
+    opacity: 1;
+  }
+  100% {
+    height: 0;
+    top: 50px;
+    opacity: 0;
+  }
+}
+
+@keyframes linemove {
+  0% {
+    height: 0;
+    top: 0;
+    opacity: 0;
+  }
+  30% {
+    height: 30px;
+    opacity: 1;
+  }
+  100% {
+    height: 0;
+    top: 50px;
+    opacity: 0;
+  }
+}
+
+#splash {
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background: #3c2f2a;
+  text-align: center;
+  color: white;
+}
+
+#splash_logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#splash_logo img {
+  width: 260px;
+}
+
+@media (min-width: 600px) {
+  #splash_logo img {
+    width: 350px;
+  }
+}
+
+@media (min-width: 1280px) {
+  #splash_logo img {
+    width: 450px;
+  }
+}
+
+.logo-fadeUp {
+  opacity: 0;
+  -webkit-animation-name: kf-fadeUpLogo;
+          animation-name: kf-fadeUpLogo;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes kf-fadeUpLogo {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes kf-fadeUpLogo {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+#page-top {
+  position: fixed;
+  right: 10px;
+  z-index: 2;
+  opacity: 0;
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+}
+
+#page-top a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #3c2f2a;
+  border-radius: 5px;
+  width: 60px;
+  height: 60px;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 0.6rem;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+#page-top a:hover {
+  background: #302622;
+  -webkit-box-shadow: 0 0 8px black;
+          box-shadow: 0 0 8px black;
+}
+
+#page-top.UpMove {
+  -webkit-animation: UpAnime 0.5s forwards;
+          animation: UpAnime 0.5s forwards;
+}
+
+#page-top.DownMove {
+  -webkit-animation: DownAnime 0.5s forwards;
+          animation: DownAnime 0.5s forwards;
+}
+
+@-webkit-keyframes UpAnime {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes UpAnime {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes DownAnime {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+  }
+}
+
+@keyframes DownAnime {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+  }
+}
+
+.disabled {
+  pointer-events: none;
+}
+
+body {
+  font-family: 'Lora','Noto Serif JP', serif;
+}
+
+#container {
+  background-color: white;
+}
+
+#content {
+  padding-top: 100px;
+}
+
+.header {
+  position: fixed;
+  background-color: #3c2f2a;
+  width: 100%;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 200;
+}
+
+.header__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header__nav {
+  display: none;
+}
+
+.mobile-menu__logo-image {
+  width: 150px;
+}
+
+.about {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.about__img {
+  width: 250px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.about__img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.about__texts .main-title {
+  text-align: center;
+  margin: 50px auto;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: -0.08em;
+  color: #3c2f2a;
+}
+
+.about__texts .about__description {
+  inline-size: 308px;
+  overflow-wrap: break-word;
+  margin: 0 auto;
+  color: #3c2f2a;
+  text-align: center;
+  line-height: 2.5em;
+  font-size: 14px;
+}
+
+.strength {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.strength__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+
+.strength__texts .main-title {
+  text-align: center;
+  margin: 50px auto;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: -0.08em;
+  color: #3c2f2a;
+}
+
+.strength__texts .strength__description {
+  inline-size: 308px;
+  overflow-wrap: break-word;
+  margin: 0 auto;
+  color: #3c2f2a;
+  text-align: center;
+  line-height: 2.5em;
+  font-size: 14px;
+}
+
+.strength__img {
+  width: 250px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.strength__img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.menu {
+  background-color: #eff0de;
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+
+.menu__img {
+  margin: 0 auto;
+  width: 150px;
+  height: 150px;
+}
+
+.menu__img img {
+  position: relative;
+  -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+  width: 150px;
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.menu .main-title {
+  text-align: center;
+  margin: 50px auto;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: -0.08em;
+  color: #3c2f2a;
+}
+
+.menu .sub-title {
+  text-align: center;
+  margin: 50px auto;
+  font-size: 24px;
+  letter-spacing: -0.09em;
+  color: #3c2f2a;
+}
+
+.menu__description {
+  inline-size: 227px;
+  overflow-wrap: break-word;
+  margin: 0 auto;
+  color: #3c2f2a;
+  line-height: 1.7em;
+  font-size: 12px;
+}
+
+.menu__description p {
+  height: 120px;
+}
+
+.gallery {
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+
+.gallery .main-title {
+  text-align: center;
+  margin: 50px auto;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: -0.08em;
+  color: #3c2f2a;
+}
+
+.gallery__btn {
+  margin: 50px auto;
+  text-align: center;
+}
+
+.info-access {
+  padding-top: 10px;
+  padding-bottom: 30px;
+  background-color: #eff0de;
+}
+
+.information .main-title {
+  text-align: center;
+  margin: 50px auto;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: -0.08em;
+  color: #3c2f2a;
+}
+
+.information__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.information__list li {
+  border-bottom: 1px solid #3c2f2a;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  color: #3c2f2a;
+  font-size: 14px;
+}
+
+.information__list li a {
+  cursor: pointer;
+}
+
+.information__list li :hover {
+  color: gray;
+}
+
+.information__list span:first-child {
+  padding-right: 30px;
+}
+
+.access .main-title {
+  text-align: center;
+  margin: 50px auto;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: -0.08em;
+  color: #3c2f2a;
+}
+
+.access__description {
+  margin-bottom: 50px;
+}
+
+.access__description p {
+  color: #3c2f2a;
+  margin-top: 15px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.footer__inner {
+  background-color: #3c2f2a;
+  width: 100%;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer__nav {
+  display: none;
+}
+
+.footer .copyright {
+  color: #eff0de;
+  font-size: 20px;
+}
+
+.footer .copyright small {
+  display: block;
+  text-align: center;
+}
+
+@media (min-width: 480px) {
+  .about__img {
+    width: 300px;
+    height: 250px;
+  }
+  .about__texts .about__description {
+    inline-size: 400px;
+    font-size: 16px;
+  }
+  .strength__img {
+    width: 300px;
+    height: 250px;
+  }
+  .strength__texts .strength__description {
+    inline-size: 400px;
+    font-size: 16px;
+  }
+  .menu__description {
+    font-size: 13px;
+    inline-size: 246px;
+    line-height: 1.8em;
+  }
+  .menu__img {
+    width: 180px;
+    height: 180px;
+  }
+  .menu__img img {
+    width: 180px;
+    height: 180px;
+  }
+  .gallery .line-btn button a {
+    padding: 10px 70px;
+  }
+}
+
+@media (min-width: 600px) {
+  .mobile-menu__logo-image {
+    width: 230px;
+  }
+  .swiper-slide {
+    height: 600px;
+  }
+  .hero__title img {
+    width: 300px;
+  }
+  .about__img {
+    width: 380px;
+    height: 300px;
+  }
+  .about__texts {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 20px;
+  }
+  .about__texts .main-title {
+    margin: 50px auto;
+  }
+  .about__texts .about__description {
+    inline-size: 400px;
+    font-size: 18px;
+  }
+  .strength__img {
+    width: 380px;
+    height: 300px;
+  }
+  .strength__texts {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 20px;
+  }
+  .strength__texts .main-title {
+    margin: 50px auto;
+  }
+  .strength__texts .strength__description {
+    inline-size: 400px;
+    font-size: 18px;
+  }
+  .menu__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .menu__item {
+    margin: 0 50px;
+  }
+  .menu__img {
+    width: 210px;
+    height: 210px;
+  }
+  .menu__img img {
+    width: 210px;
+    height: 210px;
+  }
+  .menu__description {
+    inline-size: 292px;
+    font-size: 14px;
+    line-height: 1.9em;
+  }
+  .menu__description p {
+    height: 150px;
+  }
+  .menu .btn {
+    padding: 10px 50px;
+  }
+  .menu .btn a {
+    font-size: 18px;
+  }
+  .gallery .main-title {
+    font-size: 30px;
+  }
+  .gallery__btn {
+    text-align: right;
+    margin-right: 50px;
+  }
+  .gallery__btn a {
+    font-size: 20px;
+  }
+  .information__btn a {
+    font-size: 18px;
+    padding: 10px 70px;
+  }
+}
+
+@media (min-width: 960px) {
+  #content {
+    padding-top: 0;
+  }
+  .header {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0);
+    height: 150px;
+  }
+  .header__sub-title {
+    display: none;
+  }
+  .header__nav {
+    display: block;
+  }
+  .header__inner {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .header__li {
+    display: inline-block;
+    text-align: center;
+    margin: 0 25px;
+  }
+  .header__main-title {
+    font-size: 20px;
+    position: relative;
+    display: inline-block;
+  }
+  .header__main-title::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: -10%;
+    width: 120%;
+    height: 2px;
+    background: white;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    -webkit-transform: scale(0, 1);
+            transform: scale(0, 1);
+    -webkit-transform-origin: left top;
+            transform-origin: left top;
+  }
+  .header__main-title:hover::after {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  .header__link {
+    cursor: pointer;
+    color: white;
+  }
+  .mobile-menu__logo {
+    display: none;
+  }
+  .mobile-menu__btn {
+    display: none;
+  }
+  .swiper-slide {
+    height: 700px;
+  }
+  .hero__title img {
+    width: 350px;
+  }
+  .about {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  .about__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .about__img {
+    width: 420px;
+    height: 330px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 0;
+    margin-right: 50px;
+  }
+  .about__texts {
+    margin-left: 30px;
+  }
+  .about__texts .main-title {
+    font-size: 40px;
+    margin: 20px auto;
+  }
+  .about__texts .about__description {
+    inline-size: 440px;
+    font-size: 20px;
+  }
+  .strength {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  .strength__inner {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .strength__texts {
+    margin-right: 30px;
+  }
+  .strength__texts .main-title {
+    font-size: 40px;
+    margin: 20px auto;
+  }
+  .strength__texts .strength__description {
+    inline-size: 440px;
+    font-size: 20px;
+  }
+  .strength__img {
+    width: 420px;
+    height: 330px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 50px;
+    margin-right: 0;
+  }
+  .menu__img {
+    width: 250px;
+    height: 250px;
+  }
+  .menu__img img {
+    width: 250px;
+    height: 250px;
+  }
+  .menu .main-title {
+    font-size: 40px;
+  }
+  .menu__description {
+    inline-size: 313px;
+    font-size: 15px;
+  }
+  .menu__description p {
+    height: 140px;
+  }
+  .gallery {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .gallery .main-title {
+    font-size: 40px;
+  }
+  .gallery__btn {
+    margin-right: 100px;
+  }
+  .info-access {
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .information {
+    margin-left: 100px;
+    margin-right: 30px;
+    width: 430px;
+  }
+  .information .main-title {
+    font-size: 40px;
+  }
+  .information__list span {
+    font-size: 18px;
+  }
+  .access {
+    margin-right: 100px;
+    margin-left: 30px;
+    width: 430px;
+  }
+  .access .main-title {
+    font-size: 40px;
+  }
+  .access__description p {
+    font-size: 18px;
+  }
+  .footer__inner {
+    height: 200px;
+    display: block;
+  }
+  .footer .copyright {
+    border-top: 1px solid #eff0de;
+    width: 400px;
+    margin: 0 auto;
+    padding-top: 15px;
+  }
+  .footer__nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-top: 65px;
+    padding-bottom: 65px;
+  }
+  .footer__link {
+    cursor: pointer;
+    color: #eff0de;
+  }
+  .footer__li {
+    display: inline-block;
+    text-align: center;
+    margin: 0 25px;
+  }
+  .footer__main-title {
+    font-size: 20px;
+    position: relative;
+    display: inline-block;
+  }
+  .footer__main-title::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: -10%;
+    width: 120%;
+    height: 2px;
+    background: #eff0de;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    -webkit-transform: scale(0, 1);
+            transform: scale(0, 1);
+    -webkit-transform-origin: center top;
+            transform-origin: center top;
+  }
+  .footer__main-title:hover::after {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+}
+
+@media (min-width: 1280px) {
+  .header__inner {
+    max-width: 1070px;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .hero__title img {
+    width: 400px;
+  }
+  .about__img {
+    width: 470px;
+    height: 360px;
+  }
+  .about__texts .main-title {
+    font-size: 42px;
+  }
+  .strength__img {
+    width: 450px;
+    height: 350px;
+  }
+  .strength__texts .main-title {
+    font-size: 42px;
+  }
+  .menu__item {
+    margin: 0 40px;
+  }
+  .menu .main-title {
+    font-size: 42px;
+  }
+  .menu .btn {
+    padding: 10px 55px;
+  }
+  .menu__description {
+    inline-size: 334px;
+    font-size: 16px;
+  }
+  .menu__description p {
+    height: 160px;
+  }
+  .gallery .main-title {
+    font-size: 42px;
+  }
+  .gallery__btn {
+    margin-right: 150px;
+  }
+  .information .main-title {
+    font-size: 42px;
+  }
+  .access .main-title {
+    font-size: 42px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

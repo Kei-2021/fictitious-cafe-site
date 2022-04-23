@@ -1,0 +1,47 @@
+@import 'mixin';
+
+.about,
+.strength,
+.menu,
+.gallery,
+.information,
+.access {
+    & .main-title,
+    .sub-title {
+        opacity: 0;
+
+        // .inviewがついた時の挙動
+        &.inview {
+            z-index: 10;
+            opacity: 1;// .inviewがついたタイミングで表示
+
+            & .char {
+                display: inline-block; 
+
+                @include animation(
+                    $name: kf-animate-chars,
+                    $duration: 0.5s,
+                    $timing-function: ease,
+                    $fill-mode: both,
+                );
+                // アニメーションの遅延の設定
+                @for $i from 1 through 100 {
+                    &:nth-child(#{$i}) {
+                        animation-delay: $i * 0.04s;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes kf-animate-chars {
+    0% {
+        opacity: 0;
+        transform: translateY(-50%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

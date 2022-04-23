@@ -1,0 +1,64 @@
+// ページトップリンク
+
+#page-top {
+
+    // リンクの形状
+    a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $cMainColor;
+        border-radius: 5px;
+        width: 60px;
+        height: 60px;
+        color: $cWhite;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 0.6rem;
+        transition: all 0.3s;
+
+        &:hover {
+            background: $cPageTopBtn;
+            box-shadow: 0 0 8px $cBlack;
+        }
+    }
+
+    // リンクを右下に固定
+    position: fixed;
+    right: 10px;
+    z-index: 2;
+    // はじめは非表示
+    opacity: 0;
+    transform: translateY(100px);
+
+    // 上に上がる動き
+    &.UpMove {
+        animation: UpAnime 0.5s forwards;
+    }
+    // 下に下がる動き
+    &.DownMove {
+        animation: DownAnime 0.5s forwards;
+    }
+}
+
+// 以下キーフレーム
+@keyframes UpAnime {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes DownAnime {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(100px);
+    }
+}

@@ -1,0 +1,53 @@
+@import 'mixin';
+
+// ローディング画面のためのCSS
+#splash {
+    // fixed で前面に固定
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    background: $cMainColor;
+    text-align: center;
+    color: $cWhite;
+}
+
+// Loading画面中央配置
+#splash_logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    // Loading アイコンの大きさ
+    & img {
+        width: 260px;
+        @media (min-width: 600px) {
+            width: 350px;
+        }
+        @media (min-width: 1280px) {
+            width: 450px;
+        }
+    }
+}
+
+// フェードアップするアイコンの動き
+.logo-fadeUp {
+    opacity: 0;
+
+    @include animation (
+        $name: kf-fadeUpLogo,
+        $duration: 0.5s,
+        $fill-mode: forwards,
+    )
+}
+@keyframes kf-fadeUpLogo {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

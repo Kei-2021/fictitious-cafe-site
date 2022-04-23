@@ -1,0 +1,293 @@
+// stylesheet ベース
+
+// aタグ(sectiion内のボタン)をクリックした際に、トップに行かないようにする
+.disabled {
+    // aタグ（href="#"）の無効化、レイアウトはそのまま
+    pointer-events: none;
+}
+
+body {
+    font-family: 'Lora','Noto Serif JP', serif;
+}
+
+#container {
+    // HP 背景色
+    background-color: $cWhite;
+}
+
+#content {
+    padding-top: 100px;
+}
+
+// ヘッダー
+.header {
+    position: fixed; // ウインドウ上部に固定
+    background-color: $cMainColor;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    z-index: 200;
+
+    &__inner {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    // スマホ表示はナビゲーションを非表示
+    &__nav {
+        display: none;
+    }
+}
+
+// モバイルメニュー
+.mobile-menu {
+    // ヘッダーロゴのサイズ
+    &__logo-image {
+        width: 150px;
+    }
+}
+
+// About Classic?
+.about {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    // 画像のサイズ
+    &__img {
+        width: 250px;
+        height: 200px;
+        margin: 0 auto;
+        & img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    // テキスト部分
+    &__texts {
+        & .main-title {
+            text-align: center;
+            margin: 50px auto;
+            font-size: 30px;
+            font-weight: 600;
+            letter-spacing: -0.08em;
+            color: $cMainColor;
+        }
+        & .about__description {
+            inline-size: 308px; // テキストエリア
+            overflow-wrap: break-word; // 長い単語の分割
+            margin: 0 auto;
+            color: $cMainColor;
+            text-align: center;
+            line-height: 2.5em;
+            font-size: 14px;
+        }
+    }
+}
+
+// Strength
+.strength {
+    padding-top: 50px;
+    padding-bottom:  50px;
+
+    // スマホ画面時の要素の並び順の指定
+    &__inner {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    // テキスト部分
+    &__texts {
+        & .main-title {
+            text-align: center;
+            margin: 50px auto;
+            font-size: 30px;
+            font-weight: 600;
+            letter-spacing: -0.08em;
+            color: $cMainColor;
+        }
+        & .strength__description {
+            inline-size: 308px; // テキストエリア
+            overflow-wrap: break-word; // 長い単語の分割
+            margin: 0 auto;
+            color: $cMainColor;
+            text-align: center;
+            line-height: 2.5em;
+            font-size: 14px;
+        }
+    }
+
+    // 画像のサイズ
+    &__img {
+        width: 250px;
+        height: 200px;
+        margin: 0 auto;
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+// Menu
+.menu {
+    background-color: $cBaseColor;
+    padding-top: 10px;
+    padding-bottom: 30px;
+
+    // 画像のサイズ
+    &__img {
+        margin: 0 auto;
+        width: 150px;
+        height: 150px;
+        & img {
+            position: relative;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+            width: 150px;
+            height: 150px;
+            object-fit: cover; // 画像の縦横比を維持し、サイズからはみ出た部分をトリミングする。
+        }
+    }
+
+    // テキスト部分
+    & .main-title {
+        text-align: center;
+        margin: 50px auto;
+        font-size: 30px;
+        font-weight: 600;
+        letter-spacing: -0.08em; // 文字同士の間隔を狭く
+        color: $cMainColor;
+    }
+    & .sub-title {
+        text-align: center;
+        margin: 50px auto;
+        font-size: 24px;
+        letter-spacing: -0.09em;
+        color: $cMainColor;
+    }
+    &__description {
+        inline-size: 227px; // テキストエリア
+        overflow-wrap: break-word; // 長い単語の分割
+        margin: 0 auto;
+        color: $cMainColor;
+        line-height: 1.7em;
+        font-size: 12px;
+
+        & p {
+            height: 120px;
+        }
+    }
+}
+
+// Gallery
+.gallery {
+    padding-top: 10px;
+    padding-bottom: 30px;
+
+    // テキスト部分
+    & .main-title {
+        text-align: center;
+        margin: 50px auto;
+        font-size: 30px;
+        font-weight: 600;
+        letter-spacing: -0.08em;
+        color: $cMainColor;
+    }
+
+    // ギャラリーボタン
+    &__btn {
+        margin: 50px auto;
+        text-align: center; // ボタンの中央寄せ
+    }
+}
+
+// section.info-access
+.info-access {
+    padding-top: 10px;
+    padding-bottom: 30px;
+    background-color: $cBaseColor;
+}
+
+// Information
+.information {
+    // テキスト部分
+    & .main-title {
+        text-align: center;
+        margin: 50px auto;
+        font-size: 30px;
+        font-weight: 600;
+        letter-spacing: -0.08em;
+        color: $cMainColor;
+    }
+    &__list {
+        display: flex;
+        justify-content: center;
+        & li {
+            border-bottom: 1px solid $cMainColor;
+            padding-top: 15px;
+            padding-bottom: 10px;
+            color: $cMainColor;
+            font-size: 14px;
+            & a {
+                cursor: pointer;
+            }
+            & :hover {
+                color: gray;
+            }
+        }
+        // 日付の横の余白部分
+        & span:first-child {
+            padding-right: 30px;
+        }
+    }
+}
+
+// Access
+.access {
+    // テキスト部分
+    & .main-title {
+        text-align: center;
+        margin: 50px auto;
+        font-size: 30px;
+        font-weight: 600;
+        letter-spacing: -0.08em;
+        color: $cMainColor;
+    }
+
+    &__description {
+        margin-bottom: 50px;
+        & p {
+            color: $cMainColor;
+            margin-top: 15px;
+            text-align: center;
+            font-size: 14px;
+        }
+    }
+}
+
+// フッターエリア
+.footer {
+    &__inner {
+        background-color: $cMainColor;
+        width: 100%;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__nav {
+        display: none; // 画面がスマホの時は非表示
+    }
+    & .copyright {
+        color: $cBaseColor;
+        font-size: 20px;
+        & small {
+            display: block;
+            text-align: center;
+        }
+    }
+}

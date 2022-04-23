@@ -1,0 +1,181 @@
+@import 'mixin';
+
+// Menu
+.menu {
+    &__img {
+        position: relative;
+        opacity: 0; // 初期状態は非表示
+
+        & .img {
+            position: relative;
+            z-index: 2;
+        }
+        // .inviewがついた時の挙動
+        &.inview {
+            opacity: 1;
+
+            // 写真フェードインする挙動
+            @include animation (
+                $name: kf-img-fade,
+                $duration: 1.5s,
+                $timing-function: ease,
+            );
+            // 影の部分
+            &::before {
+                content: '';
+                position: absolute;
+                z-index: -1; // 画像の下に持ってくるため
+                // bottom: -15px;
+                // right: -15px;
+                width: 100%;
+                height: 100%;
+                background-color: $cMainColor;
+                @include animation (
+                    $name: kf-img-shadow,
+                    $duration: 0.5s,
+                    $timing-function: ease,
+                    $delay: 0.8s,
+                );
+            }
+
+            &.inview:hover::before {
+                content: '';
+                transition: translate 1s;
+                transform: translate(0px, 0px);
+            }
+        }
+    }
+}
+
+@keyframes kf-img-fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes kf-img-shadow {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+        transform: translate(15px, 15px);
+        box-shadow: 0 0 8px rgb(66, 66, 66);
+    }
+}
+
+
+// About
+.about {
+    &__img {
+        position: relative;
+        opacity: 0;
+
+        & img {
+            position: relative;
+            z-index: 2;
+        }
+        // .inviewがついた時の挙動
+        &.inview {
+            opacity: 1;
+
+            // 写真が左右から出てくる挙動
+            @include animation (
+                $name: kf-img-left,
+                $duration: 1.5s,
+            );
+            // 影の部分
+            &::before {
+                content: '';
+                position: absolute;
+                z-index: -1;
+                width: 100%;
+                height: 100%;
+                background-color: $cMainColor;
+                @include animation (
+                    $name: kf-shadow-rotate,
+                    $duration: 1s,
+                    $delay: 1s,
+                );
+            }
+        }
+    }
+}
+@keyframes kf-img-left {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+@keyframes kf-shadow-rotate {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+        transform: rotate(4deg);
+        box-shadow: 0 0 8px rgb(66, 66, 66);
+    }
+
+}
+
+// Strength
+.strength {
+    &__img {
+        position: relative;
+        opacity: 0;
+
+        & img {
+            position: relative;
+            z-index: 2;
+        }
+        // .inviewがついた時の挙動
+        &.inview {
+            opacity: 1;
+
+            // 写真が左右から出てくる挙動
+            @include animation (
+                $name: kf-img-right,
+                $duration: 1.5s,
+            );
+            // 影の部分
+            &::before {
+                content: '';
+                position: absolute;
+                z-index: -1;
+                width: 100%;
+                height: 100%;
+                background-color: $cMainColor;
+                @include animation (
+                    $name: kf-shadow-rotate,
+                    $duration: 1s,
+                    $delay: 1s,
+                );
+            }
+
+        }
+    }
+}
+@keyframes kf-img-right {
+    0% {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}

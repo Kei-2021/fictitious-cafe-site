@@ -1,0 +1,136 @@
+// Stylesheet: 600px以上のタブレットやモニタで適用
+
+.mobile-menu {
+    // ヘッダーロゴのサイズ
+    &__logo-image {
+        width: 230px;
+    }
+}
+
+.swiper-slide {
+    // ヘッダースライダーのサイズ
+    height: 600px;
+}
+
+.hero {
+    // タイトルロゴのサイズ
+    &__title {
+        & img {
+            width: 300px;
+        }
+    }
+}
+
+// About Classic?
+.about {
+      // 画像のサイズ
+    &__img {
+        width: 380px;
+        height: 300px;
+    }
+    // テキスト部分
+    &__texts {
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-left: 20px;
+        & .main-title {
+            margin: 50px auto;
+        }
+        & .about__description {
+            inline-size: 400px;
+            font-size: 18px;
+        }
+    }
+}
+
+// Strength
+.strength {
+    // 画像のサイズ
+    &__img {
+        width: 380px;
+        height: 300px;
+    }
+    // テキスト部分
+    &__texts {
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-right: 20px;
+        & .main-title {
+            margin: 50px auto;
+        }
+        & .strength__description {
+            inline-size: 400px;
+            font-size: 18px;
+        }
+    }
+}
+
+// Menu
+.menu {
+    &__inner {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    &__item {
+        margin: 0 50px;
+    }
+    // 画像のサイズ
+    &__img {
+        width: 210px;
+        height: 210px;
+        & img {
+            width: 210px;
+            height: 210px;
+        }
+    }
+    // テキスト部分
+    &__description {
+        inline-size: 292px;
+        font-size: 14px;
+        line-height: 1.9em;
+
+        & p {
+            height: 150px;
+        }
+    }
+    & .btn {
+        // ボタンの文字のサイズ
+        & a {
+            font-size: 18px;
+        }
+        padding: 10px 50px;
+    }
+}
+
+// Gallery
+.gallery {
+
+    // テキスト部分
+    & .main-title {
+        font-size: 30px;
+    }
+
+    // ギャラリーボタンの位置
+    &__btn {
+        text-align: right;
+        margin-right: 50px;
+
+        // 文字のサイズ
+        & a {
+            font-size: 20px;
+        }
+    }
+}
+
+// Information
+.information {
+
+    &__btn {
+        // ボタンの文字のサイズ
+        & a {
+            font-size: 18px;
+            padding: 10px 70px;
+        }
+    }
+}

@@ -1,0 +1,17 @@
+@mixin animation( 
+    $name,
+    $duration: 1s, // 1秒を設定
+    $timing-function: ease,
+    $delay: 0s,
+    $iteration-count: 1,
+    $direction: normal,
+    $fill-mode: forwards
+) {
+    animation-name: $name;
+    animation-duration: $duration;  // 間隔の設定、アニメーションの保持時間。デフォルトが0sなので、書かないとアニメーションが行われないので必ず秒（s）、ミリ秒（ms）で書く。
+    animation-timing-function: $timing-function;  // アニメーションがどのように進行するか。デフォルトはease。
+    animation-delay: $delay;  // アニメーションが開始するまでの待ち時間。
+    animation-iteration-count: $iteration-count;  // アニメーションの回数、初期値は1, infiniteだと無限ループ
+    animation-direction: $direction;  // アニメーションの再生の向きの設定。通常はnormal、逆方向はreverse。
+    animation-fill-mode: $fill-mode;  // アニメーションの実行後にどのような状態になっていて欲しいか。例えば「forwards」と設定すると、アニメーション実行後の状態を保持する。
+}

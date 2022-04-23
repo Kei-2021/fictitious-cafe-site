@@ -1,0 +1,160 @@
+// スライドボタン
+.btn {
+    position: relative;
+    width: 200px;
+    background-color: $cBaseColor;
+    color: $cMainColor;
+    border: 1px solid $cMainColor;
+    padding: 10px 30px;
+    margin: 30px auto 50px auto;
+    text-align: center;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    z-index: 1; // ボタンの要素にローカルスタックコンテキストを生成
+
+    &.slide-bg {
+        position: relative;
+        overflow: hidden;
+
+        & span {
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            background-color: $cMainColor;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translateX(-100%);
+            transition: transform 0.5s; // 背景がスライドするアニメーションはspanタグであるため、transitionを追加。
+            z-index: -1; // spanタグ（スライドする背景）を背面に持ってくる。（→ ボタンの文字の背面に持ってくる）
+        }
+    }
+
+    &:hover {
+         // ボタンがホバーした際に、ホバーしたボタンの中のspanのスタイルを変更する。
+        & span {
+            transform: none;
+        }
+        & a {
+            color: $cBaseColor;
+        }
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+    }
+}
+
+// 線が伸びるボタン
+.line-btn {
+    
+    & button {
+        position: relative;
+
+        & a {
+            font-weight: 600;
+            cursor: pointer;
+            text-align: center;
+            color: $cMainColor;
+            display: block;     // クリックされる範囲を広げる
+            padding: 10px 50px;
+            box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        // 線の基点位置1
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            background: $cMainColor;
+            transition: all 0.2s linear;
+            transition-delay: 0.2s;
+        }
+
+        &::before {
+            right: 0;
+            top: 0;
+        }
+        &::after {
+            left: 0;
+            bottom: 0;
+        }
+
+        // 線の基点位置2
+        & span {
+            display: block;
+
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                width: 1px;
+                height: 0;
+                background: $cMainColor;
+                transition: all 0.2s linear;
+            }
+
+            &::before {
+                left: 0;
+                top: 0;
+            }
+            &::after {
+                right: 0;
+                bottom: 0;
+            }
+        }
+    }
+
+    // ホバーした時の挙動
+    & button:hover::before,
+    & button:hover::after{
+        width: 100%;/*横幅を100%に*/
+    }
+    & button:hover span::before,
+    & button:hover span::after {
+        height: 100%;
+    }
+    // ホバーした時の色の変化
+    & button:hover,
+    & button a:hover {
+        color: $cBaseColor;
+        color: $cBaseColor;
+        background-color: $cMainColor;
+        transition: all 0.2s linear;
+        transition-delay: 0.35s;
+    }
+}
+
+// 影が広がるボタン
+.shadow-btn {
+    display: block;
+    margin: 50px auto;
+    text-align: center;
+
+    & a {
+        padding: 10px 50px;
+        background: $cBaseColor;
+        border: 1px solid $cMainColor;
+        color: $cMainColor;
+        font-weight: 600;
+        transition: all .3s;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            right: -5px;
+            bottom: -5px;
+            width: 100%;
+            height: 100%;
+            border-right: 1px solid $cMainColor;
+            border-bottom: 1px solid $cMainColor;
+        }
+
+        &:hover {
+            box-shadow: 0 0 8px gray;
+            background: $cMainColor;
+            color: $cBaseColor;
+        }
+    }
+}

@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe Classic(架空サイト)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Noto+Serif+JP&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/vendors/destyle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div id="global-container">
+        <!-- ローディング ロゴ (スプラッシュ画面) -->
+        <div id="splash">
+            <div id="splash_logo">
+                <img src="images/title_logo.png" class="logo-fadeUp" alt="タイトルロゴ">
+            </div><!-- /#splash -->
+        </div>
+        <div id="container">
+            <div class="mobile-menu__cover">
+                <!--containerカバー-->
+            </div><!--/mobile-menu__cover-->
+            <header id="home" class="header">
+                <div class="header__inner">
+                    <div class="mobile-menu__logo">
+                        <img class="mobile-menu__logo-image" src="images/title_logo.png" alt="">
+                    </div>
+                    <nav class="header__nav">
+                        <ul class="header__ul">
+                            <li class="header__li">
+                                <a class="header__link" href="#home">
+                                    <span class="header__main-title">HOME</span>
+                                </a>
+                            </li>
+                            <li class="header__li">
+                                <a class="header__link" href="#about">
+                                    <span class="header__main-title">ABOUT</span>
+                                </a>
+                            </li>
+                            <li class="header__li">
+                                <a class="header__link" href="#menu">
+                                    <span class="header__main-title">MENU</span>
+                                </a>
+                            </li>
+                            <li class="header__li">
+                                <a class="header__link" href="#information">
+                                    <span class="header__main-title">INFORMATION</span>
+                                </a>
+                            </li>
+                            <li class="header__li">
+                                <a class="header__link" href="#access">
+                                    <span class="header__main-title">ACCESS</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav><!--/nav-->
+                    <button class="mobile-menu__btn"><!-- ハンバーガーメニュー -->
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button><!--/mobile-menu__btn-->
+                </div>
+            </header><!--/header-->
+            <div id="content">
+                <!-- ヘッダー ヒーロースライダー -->
+                <div class="hero">
+                    <!-- Slider main container -->
+                    <div class="swiper header-swiper">
+                        <div class="hero__title">
+                            <img class="hero__logo" src="images/title_logo.png" alt="">
+                        </div>
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide"><img class="slide-img" src="images/image01.jpg" alt="ヘッダー画像01"></div>
+                            <div class="swiper-slide"><img class="slide-img" src="images/image02.jpg" alt="ヘッダー画像02"></div>
+                        </div>
+                    </div>
+                    <div class="scrolldown"><span>Scroll</span></div>
+                </div><!--/.hero-->
+                <div id="main-content">
+                    <main>
+                        <section id="about" class="about">
+                            <div class="about__inner">
+                                <div class="about__img">
+                                    <img src="images/about01.jpg" alt="">
+                                </div>
+                                <div class="about__texts">
+                                    <h2 class="main-title">
+                                        <span class="char">A</span>
+                                        <span class="char">b</span>
+                                        <span class="char">o</span>
+                                        <span class="char">u</span>
+                                        <span class="char">t</span>
+                                        <span class="char">&nbsp;</span>
+                                        <span class="char">C</span>
+                                        <span class="char">l</span>
+                                        <span class="char">a</span>
+                                        <span class="char">s</span>
+                                        <span class="char">s</span>
+                                        <span class="char">i</span>
+                                        <span class="char">c</span>
+                                    </h2>
+                                    <div class="about__description fade">
+                                        <p>
+                                            レトロな雰囲気が広がる落ち着いた空間で。<br>
+                                            本をよみながら、仕事をしながら。<br>
+                                            あなたのシーンに合わせてお立ち寄りください。
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section><!--/section.about-->
+                        <section class="strength">
+                            <div class="strength__inner">
+                                <div class="strength__texts">
+                                    <h2 class="main-title">
+                                        <span class="char">S</span>
+                                        <span class="char">t</span>
+                                        <span class="char">r</span>
+                                        <span class="char">e</span>
+                                        <span class="char">n</span>
+                                        <span class="char">g</span>
+                                        <span class="char">t</span>
+                                        <span class="char">h</span>
+                                    </h2>
+                                    <div class="strength__description fade">
+                                        <p>
+                                            自家焙煎のオリジナルコーヒーと手作りお菓子。<br>
+                                            季節やシーンに合わせたセットメニューから、<br>コーヒー豆ごとにあわせたお菓子のセット。<br>
+                                            テラス席で外の空気と一緒に。
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="strength__img">
+                                    <img src="images/about02.jpg" alt="">
+                                </div>
+                            </div>
+                        </section><!--/section.strength-->
+                        <section id="menu" class="menu">
+                            <div>
+                                <h2 class="main-title">
+                                    <span class="char">M</span>
+                                    <span class="char">e</span>
+                                    <span class="char">n</span>
+                                    <span class="char">u</span>
+                                </h2>
+                            </div>
+                            <div class="menu__inner">
+                                <div class="menu__item">
+                                    <div class="menu__img">
+                                        <img src="images/menu_img01.jpg" alt="">
+                                    </div>
+                                    <p class="sub-title">
+                                        <span class="char">S</span>
+                                        <span class="char">w</span>
+                                        <span class="char">e</span>
+                                        <span class="char">e</span>
+                                        <span class="char">t</span>
+                                        <span class="char">s</span>
+                                    </p>
+                                    <div class="menu__texts">
+                                        <div class="menu__description fade">
+                                            <p>
+                                                当店のお菓子は全て手作り。<br>
+                                                チョコレートチャンクスコーンが人気。<br>
+                                                コーヒーやラテと一緒に。<br>
+                                                テイクアウトもご用意していますのでお帰りの際に是非。
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="btn-border">
+                                        <div class="btn slide-bg fade"><a href="#" class="disabled">
+                                            <span></span>And More
+                                        </a></div>
+                                    </div>
+                                </div>
+                                <div class="menu__item">
+                                    <div class="menu__img">
+                                        <img src="images/menu_img02.jpg" alt="">
+                                    </div>
+                                    <p class="sub-title">
+                                        <span class="char">C</span>
+                                        <span class="char">o</span>
+                                        <span class="char">f</span>
+                                        <span class="char">f</span>
+                                        <span class="char">e</span>
+                                        <span class="char">e</span>
+                                    </p>
+                                    <div class="menu__texts">
+                                        <div class="menu__description fade">
+                                            <p class="menu__p">
+                                                当店独自の製法のオリジナルコーヒーを。<br>
+                                                お気に入りの1杯をお楽しみください。<br>
+                                                また、どんな味が気になる方はいつでもお声がけください。<br>
+                                                コーヒー豆の販売も行っています。
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="btn slide-bg fade"><a href="#" class="disabled">
+                                        <span></span>And More
+                                    </a></div>
+                                </div>
+                                <div class="menu__item">
+                                    <div class="menu__img">
+                                        <img src="images/menu_img03.jpg" alt="">
+                                    </div>
+                                    <p class="sub-title">
+                                        <span class="char">S</span>
+                                        <span class="char">e</span>
+                                        <span class="char">t</span>
+                                        <span class="char">&nbsp;</span>
+                                        <span class="char">M</span>
+                                        <span class="char">e</span>
+                                        <span class="char">n</span>
+                                        <span class="char">u</span>
+                                    </p>
+                                    <div class="menu__texts">
+                                        <div class="menu__description fade">
+                                            <p>
+                                                モーニングからランチ、ディナーまでご都合に合わせたセットメニューを用意しています。<br>
+                                                コーヒーとマッチするフードを是非。
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="btn slide-bg fade"><a href="#" class="disabled">
+                                        <span></span>And More
+                                    </a></div>
+                                </div>
+                            </div>
+                        </section><!--/section.menu-->
+                        <section class="gallery">
+                            <div class="gallery__inner">
+                                <div class="gallery__texts">
+                                    <h2 class="main-title">
+                                        <span class="char">G</span>
+                                        <span class="char">a</span>
+                                        <span class="char">l</span>
+                                        <span class="char">l</span>
+                                        <span class="char">e</span>
+                                        <span class="char">r</span>
+                                        <span class="char">y</span>
+                                    </h2>
+                                </div>
+                                <div class="gallery__img fade">
+                                    <!-- Slider main container -->
+                                    <div class="swiper gallery-swiper">
+                                        <!-- Additional required wrapper -->
+                                        <div class="swiper-wrapper">
+                                        <!-- Slides -->
+                                            <div class="swiper-slide"><img src="images/gallery_img01.jpg" alt="ギャラリー画像01"></div>
+                                            <div class="swiper-slide"><img src="images/gallery_img02.jpg" alt="ギャラリー画像02"></div>
+                                            <div class="swiper-slide"><img src="images/gallery_img03.jpg" alt="ギャラリー画像03"></div>
+                                            <div class="swiper-slide"><img src="images/gallery_img04.jpg" alt="ギャラリー画像04"></div>
+                                            <div class="swiper-slide"><img src="images/gallery_img05.jpg" alt="ギャラリー画像05"></div>
+                                            <div class="swiper-slide"><img src="images/gallery_img06.jpg" alt="ギャラリー画像06"></div>
+                                            <div class="swiper-slide"><img src="images/gallery_img07.jpg" alt="ギャラリー画像07"></div>
+                                            <div class="swiper-slide"><img src="images/gallery_img08.jpg" alt="ギャラリー画像08"></div>
+                                            <div class="swiper-slide"><img src="images/gallery_img09.jpg" alt="ギャラリー画像09"></div>
+                                        </div>
+                                    </div>
+                                </div><!--/gallery Slider-->
+                                <div class="gallery__btn line-btn fade">
+                                    <button>
+                                        <a tabindex="-1">
+                                            <span></span>And More<span></span>
+                                        </a>
+                                    </button>
+                                </div>
+                            </div>
+                        </section><!--/section.gallery-->
+                        <section id="information" class="info-access">
+                            <div class="information">
+                                <div class="information__inner">
+                                    <div class="information__texts">
+                                        <h2 class="main-title">
+                                            <span class="char">I</span>
+                                            <span class="char">n</span>
+                                            <span class="char">f</span>
+                                            <span class="char">o</span>
+                                            <span class="char">r</span>
+                                            <span class="char">m</span>
+                                            <span class="char">a</span>
+                                            <span class="char">t</span>
+                                            <span class="char">i</span>
+                                            <span class="char">o</span>
+                                            <span class="char">n</span>
+                                        </h2>
+                                        <div class="information__list fade">
+                                            <ul>
+                                                <li><a tabindex="-1">
+                                                    <span>2022.03.13</span>
+                                                    <span>テイクアウト始めました</span>
+                                                </a></li>
+                                                <li><a tabindex="-1">
+                                                    <span>2022.03.13</span>
+                                                    <span>新作季節限定お菓子の情報</span>
+                                                </a></li>
+                                                <li><a tabindex="-1">
+                                                    <span>2022.02.27</span>
+                                                    <span>Webサイトをリニューアル</span>
+                                                </a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="information__btn shadow-btn fade">
+                                            <button><a tabindex="-1">
+                                                And More
+                                            </a></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--/.information-->
+                            <div id="access" class="access">
+                                <div class="access__inner">
+                                    <div class="access__texts">
+                                        <h2 class="main-title">
+                                            <span class="char">A</span>
+                                            <span class="char">c</span>
+                                            <span class="char">c</span>
+                                            <span class="char">e</span>
+                                            <span class="char">s</span>
+                                            <span class="char">s</span>
+                                        </h2>
+                                        <div class="access__description fade">
+                                            <p>〒<span>&nbsp;</span>604-8805</p>
+                                            <p>京都府<span>&nbsp;</span>京都市<span>&nbsp;</span>中京区<span>&nbsp;</span>壬生馬場町<span>&nbsp;</span>732-13</p>
+                                            <p>Tel<span>&nbsp;</span>:<span>&nbsp;</span>090-0038-XXXX</p>
+                                            <p>営業時間<span>&nbsp;</span>:<span>&nbsp;</span>10:30-20:30（L.O<span>&nbsp;</span>19:30）</p>
+                                            <p>定休日<span>&nbsp;</span>:<span>&nbsp;</span>火曜日</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--/.access-->
+                        </section><!--/.section.info-access-->
+                    </main>
+                </div><!--/#main-content-->
+                <footer id="footer" class="footer">
+                    <p id="page-top">
+                        <a href="#">Page<span>&nbsp;</span>Top</a>
+                    </p><!--/#page-top-->
+                    <div class="footer__inner">
+                        <nav class="footer__nav">
+                            <ul class="footer__ul">
+                                <li class="footer__li">
+                                    <a class="footer__link" href="#home">
+                                        <span class="footer__main-title">HOME</span>
+                                    </a>
+                                </li>
+                                <li class="footer__li">
+                                    <a class="footer__link" href="#about">
+                                        <span class="footer__main-title">ABOUT</span>
+                                    </a>
+                                </li>
+                                <li class="footer__li">
+                                    <a class="footer__link" href="#menu">
+                                        <span class="footer__main-title">MENU</span>
+                                    </a>
+                                </li>
+                                <li class="footer__li">
+                                    <a class="footer__link" href="#information">
+                                        <span class="footer__main-title">INFORMATION</span>
+                                    </a>
+                                </li>
+                                <li class="footer__li">
+                                    <a class="footer__link" href="#access">
+                                        <span class="footer__main-title">ACCESS</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav><!--/nav-->
+                        <div class="copyright">
+                            <small>&copy; 20XX Cafe Classic</small>
+                        </div>
+                    </div>
+                </footer><!--/footer-->
+            </div><!--content-->
+        </div><!--/container-->
+
+        <!--モバイルメニュー-->
+        <nav class="mobile-menu">
+            <ul class="mobile-menu__main">
+                <li class="mobile-menu__item">
+                    <a class="mobile-menu__link mobile-menu-home" href="#home">
+                        <span class="mobile-menu__main-title">Home</span>
+                        <span class="mobile-menu__sub-title">ホーム</span>
+                    </a>
+                </li>
+                <li class="mobile-menu__item">
+                    <a class="mobile-menu__link  mobile-menu-about" href="#about">
+                        <span class="mobile-menu__main-title">About</span>
+                        <span class="mobile-menu__sub-title">Classicについて</span>
+                    </a>
+                </li>
+                <li class="mobile-menu__item">
+                    <a class="mobile-menu__link mobile-menu-menu" href="#menu">
+                        <span class="mobile-menu__main-title">Menu</span>
+                        <span class="mobile-menu__sub-title">メニュー</span>
+                    </a>
+                </li>
+                <li class="mobile-menu__item">
+                    <a class="mobile-menu__link mobile-menu-information" href="#information">
+                        <span class="mobile-menu__main-title">Information</span>
+                        <span class="mobile-menu__sub-title">お知らせ</span>
+                    </a>
+                </li>
+                <li class="mobile-menu__item">
+                    <a class="mobile-menu__link mobile-menu-access" href="#access">
+                        <span class="mobile-menu__main-title">Access</span>
+                        <span class="mobile-menu__sub-title">アクセス</span>
+                    </a>
+                </li>
+            </ul>
+        </nav><!-- /nav-->
+    </div><!--/global-container-->
+
+    <!-- jQuery -->
+    <script
+        src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous"></script>
+    <!-- Swiper -->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <!-- 自作のJavaScript -->
+    <script src="scripts/libs/hero-slider.js"></script>
+    <script src="scripts/libs/mobile-menu.js"></script>
+    <script src="scripts/libs/scroll-inview.js"></script>
+    <script src="scripts/libs/page-link.js"></script>
+    <script src="scripts/libs/logo-animation.js"></script>
+    <script src="scripts/libs/page-top.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+@import 'mixin';
+
+.about,
+.strength,
+.menu,
+.gallery,
+.information,
+.access {
+    
+    & .fade {
+        position: relative;
+        opacity: 0; // 初期状態は非表示
+
+        // .inviewがついた時の挙動
+        &.inview {
+            opacity: 1;
+            
+            @include animation (
+                $name: kf-fade,
+                $duration: 2s,
+            )
+        }
+    }
+}
+
+@keyframes kf-fade {
+    0%{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

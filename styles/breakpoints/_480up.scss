@@ -1,0 +1,58 @@
+// Stylesheet: 480px以上(スマホの横向き)のモニタで適用
+
+// About Classic?
+.about {
+    // 画像のサイズ
+    &__img {
+        width: 300px;
+        height: 250px;
+    }
+    &__texts {
+        & .about__description {
+            inline-size: 400px;
+            font-size: 16px;
+        }
+    }
+}
+
+// Strength
+.strength {
+    // 画像のサイズ
+    &__img {
+        width: 300px;
+        height: 250px;
+    }
+    &__texts {
+        & .strength__description {
+            inline-size: 400px;
+            font-size: 16px;
+        }
+    }
+}
+
+// Menu
+.menu {
+    // テキスト部分
+    &__description {
+        font-size: 13px;
+        inline-size: 246px;
+        line-height: 1.8em;
+    }
+    // 画像のサイズ
+    &__img {
+        width: 180px;
+        height: 180px;
+        & img {
+            width: 180px;
+            height: 180px;
+        }
+    }
+}
+
+// Gallery
+.gallery {
+    // ギャラリーボタンのサイズ
+    & .line-btn button a {
+        padding: 10px 70px;
+    }
+}

@@ -1,0 +1,94 @@
+// Stylesheet: 1280px以上のモニタで適用
+
+.header__inner {
+    // ウィンドウが1070px以上の時の表示
+    max-width: 1070px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.hero {
+    // タイトルロゴのサイズ
+    &__title {
+        & img {
+            width: 400px;
+        }
+    }
+}
+
+// About Classic?
+.about {
+    // 画像のサイズ
+    &__img {
+        width: 470px;
+        height: 360px;
+    }
+    // テキスト部分
+    &__texts {
+        & .main-title {
+            font-size: 42px;
+        }
+    }
+}
+
+// Strength
+.strength {
+    // 画像のサイズ
+    &__img {
+        width: 450px;
+        height: 350px;
+    }
+    // テキスト部分
+    &__texts {
+        & .main-title {
+            font-size: 42px;
+        }
+    }
+}
+
+// Menu
+.menu {
+    &__item {
+        margin: 0 40px;
+    }
+    & .main-title {
+        font-size: 42px;
+    }
+    & .btn {
+        padding: 10px 55px;
+    }
+    // テキスト部分
+    &__description {
+        inline-size: 334px;
+        font-size: 16px;
+
+        & p {
+            height: 160px;
+        }
+    }
+}
+
+// Gallery
+.gallery {
+    & .main-title {
+        font-size: 42px;
+    }
+    // ギャラリーボタンの位置
+    &__btn {
+        margin-right: 150px;
+    }
+}
+
+// Information
+.information {
+    & .main-title {
+        font-size: 42px;
+    }
+}
+
+// Access
+.access {
+    & .main-title {
+        font-size: 42px;
+    }
+}

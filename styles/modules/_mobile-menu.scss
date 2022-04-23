@@ -1,0 +1,150 @@
+#container {
+    position: relative;
+    // height: 100vh;
+    z-index: 10; // モバイルメニューをcontainerの下に配置するため
+    transition: all 0.5s;
+}
+
+.header {
+    background-color: $cMainColor;
+    height: 100px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+
+// モバイルメニューの設定
+.mobile-menu {
+    position: fixed; // 位置の固定
+    right: 0;
+    top: 60px;
+    width: 300px;
+
+    // ロゴ
+    &__logo-image {
+        margin-left: 30px;
+    }
+
+    // モバイルメニューボタン
+    &__btn {
+        background-color: transparent; // 英語で透明の意
+        border: none; // ボタンのスタイルを無効化
+        outline: none !important; //ボタンにデフォルトで付与されているアウトラインを除去
+        cursor: pointer;
+        margin-right: 15px;
+    
+        & > span {
+            background-color: $cWhite;
+            width: 35px;
+            height: 2px;
+            display: block; // spanはインライン要素なので、widthやheightを設定するにはdisplayのタイプをブロック要素にする必要がある。
+            margin-bottom: 9px;
+            transition: transform 0.7s; // ボタンをクリックする時
+    
+            &:last-child {
+                margin-bottom: 0; // 3つ目のspan要素の線にはmargin-bottomは必要ないため。
+            }
+        }
+    }
+
+
+    // メニューがまだ開いていない時
+    &__cover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.2); // #containerにかける薄い膜
+        opacity: 0; // opacityは透明度を0にするだけで、要素自体は見えないがそこにある状態。（見えないがクリックすると反応する。）
+        visibility: hidden; // 「visibility」は要素を見えなくし、クリックした際にも要素は反応しない。
+        transition: opacity 1s; // 1秒間かけて
+        cursor: pointer;
+        z-index: 300; // 
+    }
+
+    &__main {
+        padding: 0;
+        // 3Dアニメーションを設定する時には、親の要素に対して、「perspective」、「transform-style」という設定値を設ける必要がある。その中で、定義されるアニメーションを3Dにすることができる。
+        perspective: 2000px; // perspective(奥行き)、2000px手前から見るようなアニメーション
+        transform-style: preserve-3d; // 3Dアニメーション
+    }
+    &__item {
+        list-style: none;
+        display: block; //横幅いっぱいに広がるようにする
+        transform: translate3d(0, 0, -1000px); // 奥行きに-1000pxの初期表示
+        padding: 0 40px;
+        transition: transform 0.3s, opacity 0.2s; // transformとopacityの間の「,」を忘れないようにする。
+        opacity: 0;
+    }
+    &__link {
+        display: block; // 左右いっぱいに広がるように設定
+        margin-top: 30px;
+        color: $cMainColor;
+        text-decoration: none;
+    }
+}
+
+
+// クリックされた時の記述
+.menu-open {
+    // ボタンをクリックした時の#containerの挙動
+    & #container {
+        transform: translate(-300px, 60px);
+        box-shadow: 0 8px 40px -10px rgba(0, 0, 0, 0.8);
+    }
+
+    & .mobile-menu {
+        // #containerを暗くする挙動
+        &__cover {
+            opacity: 1;
+            visibility: visible; // 暗くなった#containerをクリックできるようにする。
+        }
+        // ナビゲーションの挙動
+        &__item {
+            transform: none;
+            opacity: 1;
+
+            // 一つずつのナビの表示を遅らせる
+            @for $i from 1 through 5 {
+                &:nth-child(#{$i}) {
+                    transition-delay: $i * 0.07s;
+                }
+            }
+        }
+
+        // ボタンをクリックした際の挙動（ハンバーガーメニューの挙動）
+        &__btn {
+            & > span {
+                background-color: $cWhite;
+
+                &:nth-child(1) {
+                    transition-delay: 0.07s; // 開始するタイミングをずらす
+                    transform: translateY(11px) rotate(135deg);
+                }
+                &:nth-child(2) {
+                    transform: translateX(-18px) scale(0);
+                }
+                &:nth-child(3) {
+                    transition-delay: 0.1s;
+                    transform: translateY(-11px) rotate(-135deg);
+                }
+            }
+        }
+    }
+}
+
+// モバイルメニューを開いた時のナビゲーションのフォント等
+.mobile-menu {
+    &__main-title {
+        font-weight: 600;
+        font-size: 25px;
+    }
+    &__sub-title {
+        display: block; // こうすることで画面いっぱいに広がるため、折り返して表示させる。（.main-titleと同じ行にこないように設定）
+        font-size: 14px;
+        color: $cSubTitle;
+    }
+}
